@@ -1,0 +1,10 @@
+<h1>Feeds</h1>
+<p>
+	<% for feed in @feeds%>
+		<%= link_to feed.link, feed%>
+		<%= link_to 'Show', feed%> 
+		<%= link_to 'Edit', edit_feed_path(feed)%> 
+		<%= link_to 'Del', feed_path(feed),:confirm=>'Are you sure to remove this link?', :method => :delete%> 
+		<br/>
+	<% end %>
+</p>

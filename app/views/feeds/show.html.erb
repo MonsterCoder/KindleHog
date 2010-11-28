@@ -1,0 +1,16 @@
+<%= link_to 'Edit', edit_feed_path(@feed)%>
+<%= link_to 'Remove', feed_path(@feed) , :confirm => 'Are you sure?' ,:method=>:delete%>
+<p>
+<%= @rss.channel.title %><br/>
+<%= @rss.channel.link%> <br>
+<%="Total entries #{@rss.items.size}"%>
+</p>
+
+<p>
+<% for item in @rss.items%>
+	<%= link_to item.link, item.link%><br/>
+	<%= item.date%><br/>
+	<%= item.description%><br/><br/>
+<%end%>
+</p>
+

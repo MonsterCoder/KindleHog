@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+<p>
+	Your feeds<br/>
+	<%for feed in @feeds%>
+	<%end%>
+</p>
+<p>
+	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+	<%=link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' %>
+</p>
+
