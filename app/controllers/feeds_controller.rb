@@ -28,6 +28,7 @@ class FeedsController < ApplicationController
     @feed.title = rss.channel.title
     @feed.description = rss.channel.description
     @feed.LastUpdate = rss.items.last.date.to_s
+
     if @feed.save
 	redirect_to(:action=>'show', :id => @feed.id)
     else
@@ -38,8 +39,6 @@ class FeedsController < ApplicationController
   def show
     @feed = Feed.find(params[:id])
     @rss = parse(@feed.link)
-    
-    #APPFeedMailer.email(@response, response).deliver
   end
 
   def edit
@@ -58,30 +57,5 @@ class FeedsController < ApplicationController
     redirect_to(:action=>'show') 
   end
 
-private
-
-  def parse(link)
-    content = ''
-    open(link) { |f|
-	content = f.read
-    }
-
-    RSS::Parser.parse(content, false)
- 
-  end
-
-  def processRssLink(link)
-    content = ''
-    link = "http://" + link unless link.match(/^http:\/\//)
-    open(link) { |f|
-	content = f.read
-    }
-
-    doc = Hpricot(content)
-
-    rsslink = (doc/"head/link").detect {|l| l.attributes['rel']=="alternate"}
-    link = rsslink.attributes['href'] if rsslink
-    link
-  end
 
 end

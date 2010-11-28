@@ -6146,3 +6146,1277 @@ Started GET "/feeds/22" for 127.0.0.1 at 2010-11-27 23:55:44 -0600
   [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1
 Rendered feeds/show.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 1081ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-27 23:58:59 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feeds" for 127.0.0.1 at 2010-11-27 23:59:05 -0600
+  Processing by FeedsController#index as HTML
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered feeds/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 35ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feeds/new" for 127.0.0.1 at 2010-11-27 23:59:08 -0600
+  Processing by FeedsController#new as HTML
+Rendered feeds/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 20ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-27 23:59:11 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 1240ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 00:00:07 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.7ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 35ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 00:00:10 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1068ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 00:00:47 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (9.1ms)
+Completed   in 1055ms
+
+ActionView::Template::Error (undefined method `about' for #<RSS::Rss::Channel:0xb600364>):
+    1: 
+    2: <p>
+    3: <%= @rss.channel.title %><br/>
+    4: <%= @rss.channel.about%> <br>
+    5: <%="Total entries #{@rss.items.size}"%>
+    6: </p>
+    7: 
+  app/views/feeds/show.html.erb:4:in `_app_views_feeds_show_html_erb___915552415_90719230__709039443'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.5ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.9ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 00:01:18 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1033ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 00:01:48 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 48ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 00:01:50 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 64ms (Views: 37.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 09:55:20 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (1.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 118ms (Views: 36.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/feeds/new" for 127.0.0.1 at 2010-11-28 09:55:30 -0600
+  Processing by FeedsController#new as HTML
+Rendered feeds/new.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 121ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/feeds" for 127.0.0.1 at 2010-11-28 09:55:39 -0600
+  Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfraruuKstKqo0vDPPpXLn8uCPiso9KHadrU/JwdsYs=", "feed"=>{"link"=>"www.shorks.com"}, "commit"=>"Create Feed"}
+Redirected to http://127.0.0.1:3000/feeds/new
+Completed 302 Found in 7366ms
+
+
+Started GET "/feeds/new" for 127.0.0.1 at 2010-11-28 09:55:46 -0600
+  Processing by FeedsController#new as HTML
+Rendered feeds/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 19ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/feeds" for 127.0.0.1 at 2010-11-28 09:57:51 -0600
+  Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfraruuKstKqo0vDPPpXLn8uCPiso9KHadrU/JwdsYs=", "feed"=>{"link"=>"http://www.shorks.com"}, "commit"=>"Create Feed"}
+Redirected to http://127.0.0.1:3000/feeds/new
+Completed 302 Found in 6554ms
+
+
+Started GET "/feeds/new" for 127.0.0.1 at 2010-11-28 09:57:58 -0600
+  Processing by FeedsController#new as HTML
+Rendered feeds/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/feeds" for 127.0.0.1 at 2010-11-28 10:00:06 -0600
+  Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfraruuKstKqo0vDPPpXLn8uCPiso9KHadrU/JwdsYs=", "feed"=>{"link"=>"www.skorks.com"}, "commit"=>"Create Feed"}
+  [1m[36mSQL (11.1ms)[0m  [1mINSERT INTO "feeds" ("LastUpdate", "created_at", "description", "link", "title", "updated_at") VALUES ('2010-05-17 14:12:30.000000', '2010-11-28 16:00:09.590952', 'For the betterment of the software craft...', 'http://feeds.feedburner.com/softwaretechandmore', 'SKORKS', '2010-11-28 16:00:09.590952')[0m
+Redirected to http://127.0.0.1:3000/feeds/23
+Completed 302 Found in 2997ms
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:00:09 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 7108ms (Views: 25.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:19:43 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 2048ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:19:48 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 2029ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:20:24 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2195ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:21:37 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2029ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 10:23:03 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 42ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:23:06 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1446ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:23:34 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2198ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:24:14 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 2095ms (Views: 40.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:24:36 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mFeed Load (1.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2067ms (Views: 9.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:24:50 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1392ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:25:09 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1147ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:26:12 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1080ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:26:39 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1074ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 10:26:53 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:26:56 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2782ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feeds/23" for 127.0.0.1 at 2010-11-28 10:27:02 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 23) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3152ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:27:23 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (1.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1100ms (Views: 6.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:28:37 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1715ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 10:41:26 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1511ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:06:43 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (43.9ms)
+Completed   in 54ms
+
+ActionView::Template::Error (No route matches {:controller=>"send", :action=>"preview"}):
+    8: 		<%= link_to feed.link, feed%> <br/><br/>
+    9: 	<%end%>
+    10: 	</P>
+    11: 	<%=button_to "Send", :controller=>'send', :action=>'preview'%>
+    12: </p>
+    13: <p>
+    14: 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+  app/views/home/index.html.erb:11:in `_app_views_home_index_html_erb__1028199078_91508480__787529658'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:07:49 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/send/preview" for 127.0.0.1 at 2010-11-28 11:07:54 -0600
+
+ActionController::RoutingError (No route matches "/send/preview"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 11:08:29 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1
+Rendered feeds/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1233ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/send/preview" for 127.0.0.1 at 2010-11-28 11:09:04 -0600
+
+ActionController::RoutingError (No route matches "/send/preview"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/send/preview" for 127.0.0.1 at 2010-11-28 11:10:07 -0600
+
+ActionController::RoutingError (No route matches "/send/preview"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/send/preview" for 127.0.0.1 at 2010-11-28 11:11:42 -0600
+  Processing by SendController#preview as HTML
+  Parameters: {"authenticity_token"=>"QfraruuKstKqo0vDPPpXLn8uCPiso9KHadrU/JwdsYs="}
+Rendered send/preview.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send/preview" for 127.0.0.1 at 2010-11-28 11:13:21 -0600
+
+ActionController::RoutingError (No route matches "/send/preview"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:13:34 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (8.2ms)
+Completed   in 17ms
+
+ActionView::Template::Error (No route matches {:controller=>"send"}):
+    8: 		<%= link_to feed.link, feed%> <br/><br/>
+    9: 	<%end%>
+    10: 	</P>
+    11: 	<%=button_to "Send", :controller=>'send', :action=>'index'%>
+    12: </p>
+    13: <p>
+    14: 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+  app/views/home/index.html.erb:11:in `_app_views_home_index_html_erb__1028199078_96956030__787529658'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:16:04 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/publish" for 127.0.0.1 at 2010-11-28 11:16:06 -0600
+
+AbstractController::ActionNotFound (The action 'create' could not be found for PublishController):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:17:15 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+ERROR: compiling _app_views_home_index_html_erb__1028199078_95638430__787529658 RAISED /home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected '=', expecting tASSOC
+...h', :action=>'index', :method = :get);@output_buffer.safe_co...
+...                               ^
+Function body:           def _app_views_home_index_html_erb__1028199078_95638430__787529658(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "home/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Welcome to KindleHog!</h1>
+<p>
+	<h>Your feeds</h>
+	<p>
+');	for feed in @feeds
+@output_buffer.safe_concat('		');@output_buffer.append= ( feed.title );@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( feed.LastUpdate);@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( link_to feed.link, feed);@output_buffer.safe_concat(' <br/><br/>
+');	end
+@output_buffer.safe_concat('	</P>
+	');@output_buffer.append= (button_to "Send", :controller=>'publish', :action=>'index', :method = :get);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+	');@output_buffer.append= (link_to 'Add feeds', :controller=>'feeds', :action => 'new' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= (link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `module_eval'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `compile'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/ruby/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__66946489__process_action__370563879__callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `block in action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed   in 13ms
+
+ActionView::Template::Error (/home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected '=', expecting tASSOC
+...h', :action=>'index', :method = :get);@output_buffer.safe_co...
+...                               ^):
+    8: 		<%= link_to feed.link, feed%> <br/><br/>
+    9: 	<%end%>
+    10: 	</P>
+    11: 	<%=button_to "Send", :controller=>'publish', :action=>'index', :method = :get%>
+    12: </p>
+    13: <p>
+    14: 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:17:26 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"
+ERROR: compiling _app_views_home_index_html_erb__1028199078_92075180__787529658 RAISED /home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected '=', expecting tASSOC
+...h', :action=>'index', :method = 'get');@output_buffer.safe_c...
+...                               ^
+Function body:           def _app_views_home_index_html_erb__1028199078_92075180__787529658(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "home/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Welcome to KindleHog!</h1>
+<p>
+	<h>Your feeds</h>
+	<p>
+');	for feed in @feeds
+@output_buffer.safe_concat('		');@output_buffer.append= ( feed.title );@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( feed.LastUpdate);@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( link_to feed.link, feed);@output_buffer.safe_concat(' <br/><br/>
+');	end
+@output_buffer.safe_concat('	</P>
+	');@output_buffer.append= (button_to "Send", :controller=>'publish', :action=>'index', :method = 'get');@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+	');@output_buffer.append= (link_to 'Add feeds', :controller=>'feeds', :action => 'new' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= (link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `module_eval'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `compile'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/ruby/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__66946489__process_action__370563879__callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `block in action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed   in 12ms
+
+ActionView::Template::Error (/home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected '=', expecting tASSOC
+...h', :action=>'index', :method = 'get');@output_buffer.safe_c...
+...                               ^):
+    8: 		<%= link_to feed.link, feed%> <br/><br/>
+    9: 	<%end%>
+    10: 	</P>
+    11: 	<%=button_to "Send", :controller=>'publish', :action=>'index', :method = 'get'%>
+    12: </p>
+    13: <p>
+    14: 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.2ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:17:33 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 44ms (Views: 11.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/publish?method=get" for 127.0.0.1 at 2010-11-28 11:17:35 -0600
+
+AbstractController::ActionNotFound (The action 'create' could not be found for PublishController):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:18:17 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 22ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/publish?method=get" for 127.0.0.1 at 2010-11-28 11:18:22 -0600
+
+AbstractController::ActionNotFound (The action 'create' could not be found for PublishController):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:19:50 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 29ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/publish?method=index" for 127.0.0.1 at 2010-11-28 11:19:51 -0600
+
+AbstractController::ActionNotFound (The action 'create' could not be found for PublishController):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:20:45 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (37.3ms)
+Completed   in 51ms
+
+ActionView::Template::Error (No route matches {:controller=>"publish", :action=>"show"}):
+    8: 		<%= link_to feed.link, feed%> <br/><br/>
+    9: 	<%end%>
+    10: 	</P>
+    11: 	<%=button_to "Send", :controller=>'publish', :action=>'show'%>
+    12: </p>
+    13: <p>
+    14: 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+  app/views/home/index.html.erb:11:in `_app_views_home_index_html_erb__1028199078_90905140__787529658'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:21:06 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:21:35 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:21:37 -0600
+  Processing by PublishController#index as HTML
+Completed   in 2ms
+
+ActionView::MissingTemplate (Missing template publish/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/georgec/Dev/KindleHog/app/views"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:22:13 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:22:15 -0600
+  Processing by PublishController#index as HTML
+Completed   in 2ms
+
+ActionView::MissingTemplate (Missing template publish/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/georgec/Dev/KindleHog/app/views"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:22:26 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:22:27 -0600
+  Processing by PublishController#index as HTML
+Completed   in 3ms
+
+ActionView::MissingTemplate (Missing template publish/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/georgec/Dev/KindleHog/app/views"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:22:46 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 54ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:22:48 -0600
+  Processing by PublishController#index as HTML
+Rendered publish/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:23:03 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/publish" for 127.0.0.1 at 2010-11-28 11:23:04 -0600
+
+AbstractController::ActionNotFound (The action 'create' could not be found for PublishController):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:24:50 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/feeds" for 127.0.0.1 at 2010-11-28 11:24:52 -0600
+  Processing by FeedsController#create as HTML
+  Parameters: {"authenticity_token"=>"QfraruuKstKqo0vDPPpXLn8uCPiso9KHadrU/JwdsYs="}
+Redirected to http://127.0.0.1:3000/feeds/new
+Completed 302 Found in 1ms
+
+
+Started GET "/feeds/new" for 127.0.0.1 at 2010-11-28 11:24:52 -0600
+  Processing by FeedsController#new as HTML
+Rendered feeds/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 49ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/feeds" for 127.0.0.1 at 2010-11-28 11:25:03 -0600
+  Processing by FeedsController#create as HTML
+  Parameters: {"authenticity_token"=>"QfraruuKstKqo0vDPPpXLn8uCPiso9KHadrU/JwdsYs="}
+Redirected to http://127.0.0.1:3000/feeds/new
+Completed 302 Found in 1ms
+
+
+Started GET "/feeds/new" for 127.0.0.1 at 2010-11-28 11:25:03 -0600
+  Processing by FeedsController#new as HTML
+Rendered feeds/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:25:42 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/publish?method=get" for 127.0.0.1 at 2010-11-28 11:25:43 -0600
+
+AbstractController::ActionNotFound (The action 'create' could not be found for PublishController):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:27:10 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+ERROR: compiling _app_views_home_index_html_erb__1028199078_92242780__787529658 RAISED /home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected ',', expecting tASSOC
+...>'publish', {:action=>'index'}, :method=>:get);@output_buffe...
+...                               ^
+Function body:           def _app_views_home_index_html_erb__1028199078_92242780__787529658(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "home/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Welcome to KindleHog!</h1>
+<p>
+	<h>Your feeds</h>
+	<p>
+');	for feed in @feeds
+@output_buffer.safe_concat('		');@output_buffer.append= ( feed.title );@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( feed.LastUpdate);@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( link_to feed.link, feed);@output_buffer.safe_concat(' <br/><br/>
+');	end
+@output_buffer.safe_concat('	</P>
+	');@output_buffer.append= (button_to "Send", :controller=>'publish', {:action=>'index'}, :method=>:get);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+	');@output_buffer.append= (link_to 'Add feeds', :controller=>'feeds', :action => 'new' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= (link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `module_eval'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `compile'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/ruby/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__66946489__process_action__370563879__callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `block in action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed   in 13ms
+
+ActionView::Template::Error (/home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected ',', expecting tASSOC
+...>'publish', {:action=>'index'}, :method=>:get);@output_buffe...
+...                               ^):
+    8: 		<%= link_to feed.link, feed%> <br/><br/>
+    9: 	<%end%>
+    10: 	</P>
+    11: 	<%=button_to "Send", :controller=>'publish', {:action=>'index'}, :method=>:get%>
+    12: </p>
+    13: <p>
+    14: 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.7ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:27:36 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds"
+ERROR: compiling _app_views_home_index_html_erb__1028199078_96872850__787529658 RAISED /home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected ',', expecting tASSOC
+...>'publish', {:action=>'index'}, {:method=>:get});@output_buf...
+...                               ^
+Function body:           def _app_views_home_index_html_erb__1028199078_96872850__787529658(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "home/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Welcome to KindleHog!</h1>
+<p>
+	<h>Your feeds</h>
+	<p>
+');	for feed in @feeds
+@output_buffer.safe_concat('		');@output_buffer.append= ( feed.title );@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( feed.LastUpdate);@output_buffer.safe_concat('<br/>
+		');@output_buffer.append= ( link_to feed.link, feed);@output_buffer.safe_concat(' <br/><br/>
+');	end
+@output_buffer.safe_concat('	</P>
+	');@output_buffer.append= (button_to "Send", :controller=>'publish', {:action=>'index'}, {:method=>:get});@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+	');@output_buffer.append= (link_to 'Add feeds', :controller=>'feeds', :action => 'new' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= (link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `module_eval'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:255:in `compile'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:134:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/template.rb:127:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:92:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/ruby/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:435:in `_run__66946489__process_action__370563879__callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/base.rb:119:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/abstract_controller/rendering.rb:40:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:133:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_controller/metal.rb:173:in `block in action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed   in 9ms
+
+ActionView::Template::Error (/home/georgec/Dev/KindleHog/app/views/home/index.html.erb:11: syntax error, unexpected ',', expecting tASSOC
+...>'publish', {:action=>'index'}, {:method=>:get});@output_buf...
+...                               ^):
+    8: 		<%= link_to feed.link, feed%> <br/><br/>
+    9: 	<%end%>
+    10: 	</P>
+    11: 	<%=button_to "Send", :controller=>'publish', {:action=>'index'}, {:method=>:get}%>
+    12: </p>
+    13: <p>
+    14: 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:27:51 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:27:53 -0600
+  Processing by PublishController#index as HTML
+Rendered publish/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:28:23 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:28:46 -0600
+  Processing by PublishController#index as HTML
+Rendered publish/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:32:24 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered home/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 21ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:32:28 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 26ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feeds/22" for 127.0.0.1 at 2010-11-28 11:32:29 -0600
+  Processing by FeedsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE ("feeds"."id" = 22) LIMIT 1[0m
+Rendered feeds/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 2823ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-28 11:35:02 -0600
+  Processing by HomeController#index as HTML
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 44ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:35:03 -0600
+
+TypeError (wrong argument type String (expected Module)):
+  app/controllers/publish_controller.rb:2:in `include'
+  app/controllers/publish_controller.rb:2:in `<class:PublishController>'
+  app/controllers/publish_controller.rb:1:in `<top (required)>'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:35:28 -0600
+
+ActionController::RoutingError (undefined method `includes' for PublishController:Class):
+  app/controllers/publish_controller.rb:2:in `<class:PublishController>'
+  app/controllers/publish_controller.rb:1:in `<top (required)>'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:35:44 -0600
+  Processing by PublishController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `feed' for #<PublishController:0xb2f5c64>):
+  app/controllers/publish_controller.rb:4:in `index'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:36:11 -0600
+  Processing by PublishController#index as HTML
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered publish/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:38:27 -0600
+  Processing by PublishController#index as HTML
+  [1m[35mFeed Load (0.8ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered publish/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3264ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:41:03 -0600
+  Processing by PublishController#index as HTML
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered publish/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3813ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:41:56 -0600
+  Processing by PublishController#index as HTML
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered publish/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3369ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-28 11:42:10 -0600
+  Processing by PublishController#index as HTML
+  [1m[36mFeed Load (0.9ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Rendered publish/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4089ms (Views: 4.8ms | ActiveRecord: 0.9ms)
