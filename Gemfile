@@ -12,7 +12,7 @@ gem 'hpricot'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-.
+
 # To use debugger
 # gem 'ruby-debug'
 

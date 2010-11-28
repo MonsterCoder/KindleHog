@@ -10,13 +10,13 @@ class FeedsController < ApplicationController
   def new
 	@feed= Feed.new()
   end
-	
+  	
   def create
-    link = params[:feed][:link]
-    link = processRssLink(link)
+    @feed = params[:feed]
     
     begin
-	parse(link)
+	link = processRssLink(@feed[:link])
+	rss = parse(link)
     rescue
 	flash[:error]='The url is not a valid feed link'
 	redirect_to(:action=>'new')
@@ -25,6 +25,9 @@ class FeedsController < ApplicationController
 
     @feed = Feed.new(params[:feed])
     @feed.link = link
+    @feed.title = rss.channel.title
+    @feed.description = rss.channel.description
+    @feed.LastUpdate = rss.items.last.date.to_s
     if @feed.save
 	redirect_to(:action=>'show', :id => @feed.id)
     else
@@ -69,13 +72,13 @@ private
 
   def processRssLink(link)
     content = ''
+    link = "http://" + link unless link.match(/^http:\/\//)
     open(link) { |f|
 	content = f.read
     }
+
     doc = Hpricot(content)
-   #(doc/"head/link").each do |p|
-   #	puts p.attributes['type']
-   # end
+
     rsslink = (doc/"head/link").detect {|l| l.attributes['rel']=="alternate"}
     link = rsslink.attributes['href'] if rsslink
     link

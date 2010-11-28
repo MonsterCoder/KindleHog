@@ -1,8 +1,13 @@
-<h1>Welcome!</h1>
+<h1>Welcome to KindleHog!</h1>
 <p>
-	Your feeds<br/>
+	<h>Your feeds</h>
+	<p>
 	<%for feed in @feeds%>
+		<%= feed.title %><br/>
+		<%= feed.LastUpdate%><br/>
+		<%= link_to feed.link, feed%> <br/><br/>
 	<%end%>
+	</P>
 </p>
 <p>
 	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
