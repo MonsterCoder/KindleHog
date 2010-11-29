@@ -3,6 +3,7 @@ require 'rss'
 require 'hpricot'
 
 class FeedsController < ApplicationController
+  include FeedHelper
   def index
 	@feeds =Feed.find(:all)
   end
@@ -30,7 +31,7 @@ class FeedsController < ApplicationController
     @feed.LastUpdate = rss.items.last.date.to_s
 
     if @feed.save
-	redirect_to(:action=>'show', :id => @feed.id)
+	redirect_to(:controller=>:home, :action=>:index)
     else
 	redirect_to(:action=>'new')
     end

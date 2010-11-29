@@ -12,6 +12,7 @@ module FeedHelper
   def processRssLink(link)
     content = ''
     link = "http://" + link unless link.match(/^http:\/\//)
+        
     open(link) { |f|
 	content = f.read
     }
