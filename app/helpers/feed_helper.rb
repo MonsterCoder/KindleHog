@@ -21,7 +21,6 @@ module FeedHelper
 
     rsslink = (doc/"head/link").detect {|l| l.attributes['rel']=="alternate"}
     link = rsslink.attributes['href'] if rsslink
-    p "current link " + link
     link
   end
 end

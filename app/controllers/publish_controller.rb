@@ -3,44 +3,37 @@ require 'hpricot'
 
 class PublishController < ApplicationController
   include FeedHelper
+  include PublishHelper
+
   def index
-	@entities = []
-	feeds = Feed.find(:all)
-	feeds.each { |feed|
-	   rss = parse(feed.link)
-	   @entities = @entities + rss.items
-	}
-          
+	@entities = GetEntities()
+	#feeds = Feed.find(:all)
+	#feeds.each { |feed|
+	#  rss = parse(feed.link)
+	#   @entities = @entities + rss.items
+	#}
   end
   
   def create 
-     @entities = []
-	feeds = Feed.find(:all)
-	feeds.each { |feed|
-	   rss = parse(feed.link)
-	   @entities = @entities + rss.items
-     }
+     @entities = GetEntities()
      @response = ""
      body =''
      ref =''
 
      @entities.each_with_index { |entity, i|
        begin
-	p entity.link + "-----------------"
        	doc = Hpricot(open(entity.link).read)
-        ref =ref +"<a href=\"#{i}\"> #{entity.title} </a>"
+        ref =ref +"<a href=\"c#{i}\"> #{entity.title} </a> <br/>"
         html =(doc/"body").inner_html
-	body = "#{body}  <a name=\"#{i}\"> #{html} </a>"
+	body = "#{body}  <a name=\"c#{i}\"> <p> #{html} </p></a><br/>"
        rescue
-         p entity.link + " failed"
+        ref =ref + "#Failed in getting - {entity.link} - <br/>"
        end
-       
      }
 
      @response = "<html><body> #{ref} #{ body} </body></html>"
-     FeedMailer.email('cheny2002_36@kindle.com', @response).deliver
-     #render :html=>@response
+     FeedMailer.email('georgec@price-hvac.com', @response).deliver
+  
   end
-    
-    #
+
 end

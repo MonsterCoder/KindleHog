@@ -45628,3 +45628,43 @@ Content-ID: <4cf3435b26f50_6195eef872458bc@georgec-VirtualBox.mail>
 ----==_mimepart_4cf3435b2105f_6195eef8724579e--
 Rendered publish/create.html.erb within layouts/application (45.2ms)
 Completed 200 OK in 159522ms (Views: 52.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-11-30 17:04:43 -0600
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFeed Load (0.1ms)[0m  SELECT "feeds".* FROM "feeds"
+Rendered home/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 97ms (Views: 25.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-30 17:04:46 -0600
+  Processing by PublishController#index as HTML
+Completed   in 19ms
+
+NameError (uninitialized constant PublishController::GetEntities):
+  app/controllers/publish_controller.rb:9:in `index'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/publish" for 127.0.0.1 at 2010-11-30 17:05:18 -0600
+  Processing by PublishController#index as HTML
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed   in 1409ms
+
+NameError (uninitialized constant FeedHelper::RSS):
+  app/helpers/feed_helper.rb:8:in `parse'
+  app/helpers/publish_helper.rb:6:in `block in GetEntities'
+  app/helpers/publish_helper.rb:5:in `each'
+  app/helpers/publish_helper.rb:5:in `GetEntities'
+  app/controllers/publish_controller.rb:9:in `index'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)

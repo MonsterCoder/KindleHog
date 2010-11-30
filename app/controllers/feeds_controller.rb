@@ -33,6 +33,7 @@ class FeedsController < ApplicationController
     if @feed.save
 	redirect_to(:controller=>:home, :action=>:index)
     else
+	flash[:error]='Creating new feed failed.'
 	redirect_to(:action=>'new')
     end
   end
