@@ -23,7 +23,7 @@ class PublishController < ApplicationController
      @entities.each_with_index { |entity, i|
        begin
        	doc = Hpricot(open(entity.link).read)
-        ref =ref +"<a href=\"c#{i}\"> #{entity.title} </a> <br/>"
+        ref =ref +"<a href=\"#c#{i}\"> #{entity.title} </a> <br/>"
         html =(doc/"body").inner_html
 	body = "#{body}  <a name=\"c#{i}\"> <p> #{html} </p></a><br/>"
        rescue
@@ -32,7 +32,7 @@ class PublishController < ApplicationController
      }
 
      @response = "<html><body> #{ref} #{ body} </body></html>"
-     FeedMailer.email('georgec@price-hvac.com', @response).deliver
+     FeedMailer.email('cheny2002@hotmail.com', @response).deliver
   
   end
 
