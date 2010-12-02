@@ -18,8 +18,11 @@ gem 'hpricot'
 
 # Bundle the extra gems:
 # gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
+#sudo apt-get install libxml2-dev libxslt1-dev
+
+gem 'nokogiri'
+gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'omniauth'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
