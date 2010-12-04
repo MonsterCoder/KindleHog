@@ -1,4 +1,6 @@
 KindleHog::Application.routes.draw do
+  devise_for :users
+
   get "send/preview"
 
   get "feed/index"

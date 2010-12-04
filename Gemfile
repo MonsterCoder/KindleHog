@@ -7,6 +7,12 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'hpricot'
+gem 'devise', '1.2.rc' 
+gem 'nokogiri'
+gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'omniauth'
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -20,9 +26,7 @@ gem 'hpricot'
 # gem 'bj'
 #sudo apt-get install libxml2-dev libxslt1-dev
 
-gem 'nokogiri'
-gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'omniauth'
+
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
