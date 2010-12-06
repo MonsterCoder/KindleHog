@@ -43,7 +43,7 @@ module KindleHog
     config.action_mailer.smtp_settings = {
 	:address	=> "smtp.gmail.com",
 	:port		=> 587,
-	:domain		=>"pric-hvac.com",
+	:domain		=>"kindlehog.com",
 	:user_name	=>"MonsterCoder",
 	:password	=>"new123456",
 	:authentication	=>"plain",
