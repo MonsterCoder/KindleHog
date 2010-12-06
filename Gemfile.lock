@@ -134,6 +134,7 @@ DEPENDENCIES
   devise (= 1.2.rc)
   hpricot
   nokogiri
+  oa-oauth
   omniauth
   rails (= 3.0.0)
   sqlite3-ruby

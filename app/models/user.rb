@@ -6,10 +6,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-	has_many :authoriztions
-	has_many :feeds
-	def self.create_from_hash!(hash)
-	  create(:name => hash['user_info']['name'])
-	end
 
+  has_many :feeds
+  has_many :authentications
 end
+

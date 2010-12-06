@@ -1,4 +1,4 @@
-<h1>Manage Feeds</h1>
+<h1>Your current subscriptions:</h1>
 <p>
 	<% for feed in @feeds%>
 		<p>
@@ -6,12 +6,12 @@
 		<%= feed.description%> <br/>
 		<%= link_to feed.link, feed%>
 		</p>
-		<%= link_to 'Edit', edit_feed_path(feed)%> 
-		<%= link_to 'Del', feed_path(feed),:confirm=>'Are you sure to remove this link?', :method => :delete%> 
+		
+		<%= link_to 'Remove', feed_path(feed),:confirm=>'Are you sure to remove this link?', :method => :delete%> 
 		<br/>
 	<% end %>
 </p>
 <p>
-	<%= link_to 'new', :action=>:new%> 
-	<%= link_to 'Home', :controller =>:home, :action=>:index%> 
+	<%= button_to 'Add', {:action=>:new}, :method=>:get%> 
+	<!--<%= button_to 'Home', :controller =>:home, :action=>:index%> -->
 </p>

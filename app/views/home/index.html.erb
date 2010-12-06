@@ -1,17 +1,12 @@
-<h1>Welcome to KindleHog!</h1>
-<p>
-	<h>Your feeds</h>
+<div>
+	<h2>Welcome to KindleHog!</h2>
+<div/>
+
+<div>
 	<p>
-	<%for feed in @feeds%>
-		<%= feed.title %><br/>
-		<%= feed.LastUpdate%><br/>
-		<%= link_to feed.link, feed%> <br/><br/>
-	<%end%>
-	</P>
-	<%=button_to "Send", {:controller=>'publish', :action=>'index'}, {:method=>:get}%>
-</p>
-<p>
-	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
-	<%=link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' %>
-</p>
+		With Kindle Hog, you can subscribe to your favourate RSS/ATOM blogs and send to your kindle at scheduled time. It just satisfies your apertize for knowledge.
+	</p>
+
+<div>
+
 

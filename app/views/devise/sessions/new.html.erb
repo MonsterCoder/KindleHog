@@ -1,0 +1,48 @@
+
+<h2>Sign in</h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <p><%= f.label :email %><br />
+  <%= f.email_field :email %></p>
+
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password %></p>
+
+  <% if devise_mapping.rememberable? -%>
+    <p>
+	<%= f.check_box :remember_me %> <%= f.label :remember_me %>
+	<%=link_to "Forgot password", "/users/password/new"%>
+	<%= f.submit "Sign in" %>
+    </p>
+  <% end -%>
+	
+<% end %>
+
+
+
+<div>
+	<p>
+		<h2>Or sign in using your account with<h2/>
+	<p/>
+	<p>
+		<a href="/auth/twitter" class="auth_provider">
+		  <%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %>
+		  Twitter
+		</a>
+		<a href="/auth/facebook" class="auth_provider">
+		  <%= image_tag "facebook_64.png", :size => "64x64", :alt => "Facebook" %>
+		  Facebook
+		</a>
+		<a href="/auth/google_apps" class="auth_provider">
+		  <%= image_tag "google_apps_64.png", :size => "64x64", :alt => "Google" %>
+		  Google
+		</a>
+		<a href="/auth/open_id" class="auth_provider">
+		  <%= image_tag "open_id_64.png", :size => "64x64", :alt => "OpenID" %>
+		  OpenID
+		</a>
+	</p>
+<div/>
+
+
+

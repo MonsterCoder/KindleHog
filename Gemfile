@@ -11,6 +11,7 @@ gem 'devise', '1.2.rc'
 gem 'nokogiri'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'omniauth'
+gem 'oa-oauth', :require=>"omniauth/oauth"
 
 
 # Use unicorn as the web server
