@@ -5,7 +5,8 @@ require 'hpricot'
 class FeedsController < ApplicationController
   include FeedHelper
   def index
-	@feeds =Feed.find(:all)
+	@feeds =current_user.feeds
+	p @feeds
   end
 
   def new
@@ -13,8 +14,8 @@ class FeedsController < ApplicationController
   end
   	
   def create
-    @feed = params[:feed]
-    
+    @feed = current_user.feeds.create!(params[:feed])
+
     begin
 	link = processRssLink(@feed[:link])
 	rss = parse(link)
@@ -24,7 +25,8 @@ class FeedsController < ApplicationController
 	return
     end
 
-    @feed = Feed.new(params[:feed])
+
+    
     @feed.link = link
     @feed.title = rss.channel.title
     @feed.description = rss.channel.description

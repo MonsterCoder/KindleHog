@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>KindleHog</title>
 
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-	  <div id="user_nav">   
-	  <% if user_signed_in? %>   
-	    Signed in as <%= current_user.email %>. Not you?   
-	    <%= link_to "Sign out", destroy_user_session_path %>   
-	  <% else %>   
-	    <%= link_to "Sign up", new_user_registration_path %> or  
-	    <%= link_to "Sign in", new_user_session_path %>   
-	  <% end %>   
-	</div>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-       <p class="error"><%= alert %></p>
-<%= yield %>
+	<head>
+		  <title>Kindle Hog Reader</title>
 
-</body>
+		  <%= stylesheet_link_tag :all %>
+		  <%= javascript_include_tag :defaults %>
+		  <%= csrf_meta_tag %>
+	</head>
+
+	<body id="body">
+		<div id="banner">   
+			  <%= @page_title ||"Kindle Hog"%>
+		</div>
+		  	
+		<div id="user_info">
+			  <% if user_signed_in? %>   
+			    <%= current_user.email %>. Not you?   
+			    <%= link_to "Sign out", destroy_user_session_path %>   
+			  <% else %>   
+			    <%= link_to "Sign up", new_user_registration_path %> or  
+			    <%= link_to "Sign in", new_user_session_path %>   
+			  <% end %>   
+		</div>
+	
+		<div id="columns">
+			<div id = "side">
+				<% if user_signed_in? %> 
+					<%= link_to "Settings"%>
+				<%end%>
+		
+			</div>
+			<div id ="main">
+				<%= yield %>
+			</div>
+		</div>
+
+
+
+	</body>
 </html>

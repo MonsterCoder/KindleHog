@@ -1,17 +1,15 @@
-<h1>Your current subscriptions:</h1>
-<p>
-	<% for feed in @feeds%>
-		<p>
-		<%=h feed.title%> <br/>
-		<%= feed.description%> <br/>
-		<%= link_to feed.link, feed%>
-		</p>
-		
-		<%= link_to 'Remove', feed_path(feed),:confirm=>'Are you sure to remove this link?', :method => :delete%> 
-		<br/>
-	<% end %>
-</p>
-<p>
-	<%= button_to 'Add', {:action=>:new}, :method=>:get%> 
-	<!--<%= button_to 'Home', :controller =>:home, :action=>:index%> -->
-</p>
+	<h1>Your subscriptions</h1>
+	<div class="feed_entry">
+		<%for feed in @feeds%>
+			<h3><%= feed.title %><br/></h3>
+			<%= feed.LastUpdate%><br/>
+			<%= link_to feed.link, feed%> <br/><br/>
+		<%end%>
+	</div>
+	<%=button_to "Send", {:controller=>'publish', :action=>'index'}, {:method=>:get}%>
+
+	<p>
+		<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+		<%=link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' %>
+	</p>
+
