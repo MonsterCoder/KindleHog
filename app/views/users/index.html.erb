@@ -1,17 +1,16 @@
-<h1>Welcome to KindleHog!</h1>
-<p>
-	<h>Your feeds</h>
-	<p>
-	<%for feed in @feeds%>
-		<%= feed.title %><br/>
-		<%= feed.LastUpdate%><br/>
-		<%= link_to feed.link, feed%> <br/><br/>
-	<%end%>
-	</P>
+
+	<h1>Your subscriptions</h1>
+	<div class="feed_entry">
+		<%for feed in @feeds%>
+			<h3><%= feed.title %><br/></h3>
+			<%= feed.LastUpdate%><br/>
+			<%= link_to feed.link, feed%> <br/><br/>
+		<%end%>
+	</div>
 	<%=button_to "Send", {:controller=>'publish', :action=>'index'}, {:method=>:get}%>
-</p>
-<p>
-	<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
-	<%=link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' %>
-</p>
+
+	<p>
+		<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
+		<%=link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' %>
+	</p>
 
