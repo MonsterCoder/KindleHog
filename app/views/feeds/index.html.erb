@@ -1,10 +1,10 @@
 	<h1>Your subscriptions</h1>
 	<div class="feed_entry">
-		<!--<%for feed in @feeds%>
+		<%for feed in @feeds%>
 			<h3><%= feed.title %><br/></h3>
 			<%= feed.LastUpdate%><br/>
 			<%= link_to feed.link, feed%> <br/><br/>
-		<%end%>-->
+		<%end%>
 	</div>
 
 	<%=button_to "Send", {:controller=>'publish', :action=>'index'}, {:method=>:get}%>
