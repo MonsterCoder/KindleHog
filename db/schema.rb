@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101208060250) do
+ActiveRecord::Schema.define(:version => 20101208060706) do
 
   create_table "authentications", :force => true do |t|
     t.string   "uid"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20101208060250) do
     t.string   "title"
     t.string   "description"
     t.datetime "LastUpdate"
-    t.integer  "user_id",     :limit => 255
+    t.integer  "user_id"
   end
 
   create_table "omniauthables", :force => true do |t|
