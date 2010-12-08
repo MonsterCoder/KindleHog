@@ -6,7 +6,6 @@ class FeedsController < ApplicationController
   include FeedHelper
   def index
 	@feeds =current_user.feeds
-	p @feeds
   end
 
   def new
