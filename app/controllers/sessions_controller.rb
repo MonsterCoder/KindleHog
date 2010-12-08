@@ -1,4 +1,4 @@
-class _SessionsController < ApplicationController
+class SessionsController < ApplicationController
 	#def create
 	 # auth = request.env['rack.auth']
 	 # unless @auth = Authorization.find_from_hash(auth)
