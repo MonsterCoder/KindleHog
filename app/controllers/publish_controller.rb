@@ -24,7 +24,12 @@ class PublishController < ApplicationController
      }
 
      @response = "<html><body> #{ref} #{ body} </body></html>"
-     FeedMailer.email('cheny2002@hotmail.com', @response).deliver
+
+     if (current_user.targetEmail)
+     	FeedMailer.email(current_user.targetEmail, @response).deliver 
+     else
+	FeedMailer.email(current_user.email, @response).deliver 
+     end
   
   end
 
