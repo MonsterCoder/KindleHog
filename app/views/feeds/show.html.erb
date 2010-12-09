@@ -6,10 +6,10 @@
 </p>
 
 <p>
-<% for item in @rss.items%>
-	<%= link_to item.title, item.link%><br/>
-	<%= item.date%><br/>
-	<%= raw item.description%><br/><br/>
-<%end%>
+	<% for item in @rss.items%>
+		<%= link_to item.title, item.link%><br/>
+		<%= item.date %><br/>
+		<%= raw item.description%><br/><br/>
+	<%end%>
 </p>
 

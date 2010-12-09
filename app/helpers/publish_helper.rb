@@ -6,7 +6,7 @@ module PublishHelper
 	def GetEntities
 		entities = []
 		
-		Feed.find(:all).each { |feed|
+		current_user.feeds.each { |feed|
 	   		rss = parse(feed.link)
 	   		entities = entities + rss.items 
 		}

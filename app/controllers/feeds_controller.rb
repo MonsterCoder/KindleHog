@@ -4,8 +4,10 @@ require 'hpricot'
 
 class FeedsController < ApplicationController
   include FeedHelper
+  include PublishHelper
   def index
-	@feeds =current_user.feeds
+	@entries = GetEntities()
+
   end
 
   def new

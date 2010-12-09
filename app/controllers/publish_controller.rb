@@ -5,14 +5,6 @@ class PublishController < ApplicationController
   include FeedHelper
   include PublishHelper
 
-  def index
-	@entities = GetEntities()
-	#feeds = Feed.find(:all)
-	#feeds.each { |feed|
-	#  rss = parse(feed.link)
-	#   @entities = @entities + rss.items
-	#}
-  end
   
   def create 
      @entities = GetEntities()

@@ -5,12 +5,34 @@ html, body {
   height: 100%;
 }
 
+h1 {
+        font:  150% sans-serif;
+        color: #226;
+        border-bottom: 3px dotted #77d;
+}
+
+
+h3 {
+	color: #226;
+ 	margin-bottom: 5px;
+}
+
 a img {
   border: none;
 }
 
 a {
   color: #0000FF;
+}
+
+.item_info {
+	font-size:    small;
+	margin-bottom: 5px
+	font-weight: bold;
+}
+
+span {
+	font-weight: bold;
 }
 
 .clear {
@@ -127,6 +149,14 @@ a {
   margin-bottom: 10px;
   text-align: right;
 }
+
+.description {
+	color:        #244;
+	font-weight:  bold;
+	font-size:    larger;
+}
+
+
 
 .authentications {
   margin-bottom: 30px;

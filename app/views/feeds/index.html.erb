@@ -1,16 +1,16 @@
-	<h1>Your subscriptions</h1>
+	<h1>All items</h1>
+
+	<%=button_to "Send to kindle", {:controller=>'publish', :action=>'create'}%>
 	<div class="feed_entry">
-		<%for feed in @feeds%>
-			<h3><%= feed.title %><br/></h3>
-			<%= feed.LastUpdate%><br/>
-			<%= link_to feed.link, feed%> <br/><br/>
-		<%end%>
+			<% for entry in @entries%>
+		  		<h3><%= entry.title %> </h3>
+				<b ><%=entry.dc_creator%> <%= entry.pubDate%> </b><br/>
+			
+				<%=sanitize entry.description%>
+				<%= link_to "[..]", entry.link%> <br/><br/>
+			<%end%>
 	</div>
 
-	<%=button_to "Send", {:controller=>'publish', :action=>'index'}, {:method=>:get}%>
 
-	<p>
-		<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
-		<%=link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' %>
-	</p>
+
 

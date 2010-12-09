@@ -26,6 +26,9 @@
 	
 		<div id="columns">
 			<div id = "side">
+				<p>
+				   <%=button_to 'Add s subscription', {:controller=>'feeds', :action => 'new'}, {:method=>:get} %>
+				</p>
 				<% if user_signed_in? %> 
 					<%= link_to "Settings"%>
 				<%end%>
