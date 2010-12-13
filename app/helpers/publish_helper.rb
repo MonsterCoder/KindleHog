@@ -3,14 +3,14 @@ require 'rss'
 require 'hpricot'
 
 module PublishHelper
-	def GetEntities
+	def GetEntities(feeds=current_user.feeds)
 		entities = []
 		
-		current_user.feeds.each { |feed|
+		feeds.each { |feed|
 	   		rss = parse(feed.link)
 	   		entities = entities + rss.items 
 		}
 
-		entities
+		return entities
 	end
 end

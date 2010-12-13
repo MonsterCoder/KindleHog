@@ -6,19 +6,19 @@ class FeedsController < ApplicationController
   include FeedHelper
   include PublishHelper
   def index
-	@entries = GetEntities()
+	@entries = GetEntities(current_user.feeds)
   end
 
   def new
 	@feed= current_user.feeds.build()
 	respond_to  do |format|
-		format.html
+		format.html {render @feed}
 		format.js
 	end
   end
   	
   def create
-    @feed = params[:feed]
+    @feed = current_user.feeds.build(params[:feed])
 
     begin
 	link = processRssLink(@feed[:link])
@@ -29,18 +29,26 @@ class FeedsController < ApplicationController
 	return
     end
 
-
-    
-    @feed.link = link
-    @feed.title = rss.channel.title
-    @feed.description = rss.channel.description
-    @feed.LastUpdate = rss.items.last.date.to_s
+    @feed.link= link
+    @feed.title= rss.channel.title
+    @feed.description= rss.channel.description
+    @feed.LastUpdate= rss.items.last.date.to_s
 
     if @feed.save
-	redirect_to(:controller=>:home, :action=>:index)
+	respond_to do |format| 
+		format.html	{redirect_to(:action=>:index)	}
+	
+		format.js	{
+				   @entries = rss.items
+				}
+	end
     else
 	flash[:error]='Creating new feed failed.'
-	redirect_to(:action=>'new')
+	respond_to  do |format|
+		format.html	{render @feed	}		
+
+		format.js	
+	end
     end
   end
   
@@ -51,6 +59,7 @@ class FeedsController < ApplicationController
 
   def edit
     @feed = Feed.find(params[:id])
+    render @feed
   end
 
   def destroy
