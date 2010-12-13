@@ -1,7 +1,6 @@
 html, body {
-  background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  font-size: 13px;
   height: 100%;
 }
 
@@ -23,28 +22,16 @@ a img {
 
 a {
   color: #0000FF;
-}
-
-.item_info {
-	font-size:    small;
-	margin-bottom: 5px
-	font-weight: bold;
+  font-size: 13px;
 }
 
 span {
 	font-weight: bold;
 }
 
-.clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
-}
-
 #container {
   width: 75%;
   margin: 0 auto;
-  background-color: #FFF;
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
@@ -69,51 +56,26 @@ span {
   border: solid 1px #C66;
 }
 
-#banner {
-	background: #9c9;
-	padding-left: 5px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-bottom: 2px solid;
-	font: small-caps 40px/40px "Times New Roman", serif;
-	color: #282;
-	text-align: left;
+.item_info {
+	font-size:    small;
+	margin-bottom: 5px
+	font-weight: bold;
 }
 
-#user_info {
-	float: right;
-}
-
-#columns {
-	background: #141;
-
-}
-
-#side {
-	float: left;
-	padding-top: 1em;
-	padding-left: 1em;
-	padding-bottom: 1em;
-	width: 16em;
-	background: #141;
-
-}
-
-#side a {
-	color: #bfb;
-	font-size: small;
-}
-
-#main {
-	margin-left: 17em;
-	padding-top: 4ex;
-	padding-left: 2em;
-	background: white;
-	min-height:660px
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
 }
 
 .fieldWithErrors {
   display: inline;
+}
+
+#user_nav {
+  float: right;
+  margin-bottom: 10px;
+  text-align: right;
 }
 
 .error_messages {
@@ -144,18 +106,52 @@ span {
   margin: 0;
 }
 
-#user_nav {
-  float: right;
-  margin-bottom: 10px;
-  text-align: right;
+#banner {
+	
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid;
+	font: small-caps 40px/40px "Times New Roman", serif;
+	
+	text-align: left;
 }
+
+#user_info {
+	float: right;
+ 	clear: both;
+}
+
+#top_row {
+	padding-top: 1em;
+}
+
+#columns {
+		padding-top: 1ex;
+		padding-left: 1em;
+		padding-bottom: 1em;
+}
+
+	#columns #left_column {
+		width: 16em;
+		padding-top: 1ex;
+	}
+
+		#columns #left_column a {
+			color: #bfb;
+			font-size: small;
+		}
+
+	#columns #main_column {
+		margin-left: 12em;
+	}
+
 
 .description {
 	color:        #244;
 	font-weight:  bold;
 	font-size:    larger;
 }
-
 
 
 .authentications {

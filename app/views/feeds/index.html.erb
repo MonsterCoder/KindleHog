@@ -1,6 +1,15 @@
-	<h1>All items</h1>
+	<%content_for :left_column_top do%>
+		
+		<%=button_to 'Add subscription', new_feed_path, {:method=>:get, :remote=>true} %>
 
-	<%=button_to "Send to kindle", {:controller=>'publish', :action=>'create'}%>
+	<%end%>
+
+	<div id="top_row_content">
+	</div>
+
+	<h1>You have <%=@entries.count%> items</h1>
+
+	<!--<%=button_to "Send to kindle", {:controller=>'publish', :action=>'create'}%>-->
 	<div class="feed_entry">
 			<% for entry in @entries%>
 		  		<h3><%= entry.title %> </h3>

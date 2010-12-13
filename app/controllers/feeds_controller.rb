@@ -7,15 +7,18 @@ class FeedsController < ApplicationController
   include PublishHelper
   def index
 	@entries = GetEntities()
-
   end
 
   def new
-	@feed= Feed.new()
+	@feed= current_user.feeds.build()
+	respond_to  do |format|
+		format.html
+		format.js
+	end
   end
   	
   def create
-    @feed = current_user.feeds.create!(params[:feed])
+    @feed = params[:feed]
 
     begin
 	link = processRssLink(@feed[:link])
