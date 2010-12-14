@@ -5,16 +5,16 @@ require 'hpricot'
 class FeedsController < ApplicationController
   include FeedHelper
   include PublishHelper
+
+  respond_to :html, :js
+
   def index
 	@entries = GetEntities(current_user.feeds)
   end
 
   def new
 	@feed= current_user.feeds.build()
-	respond_to  do |format|
-		format.html {render @feed}
-		format.js
-	end
+	respond_with(@feed)
   end
   	
   def create
@@ -24,8 +24,7 @@ class FeedsController < ApplicationController
 	link = processRssLink(@feed[:link])
 	rss = parse(link)
     rescue
-	flash[:error]='The url is not a valid feed link'
-	redirect_to(:action=>'new')
+	redirect_to(@feed, :notice=>"Not a valid feed link'")
 	return
     end
 
@@ -36,17 +35,13 @@ class FeedsController < ApplicationController
 
     if @feed.save
 	respond_to do |format| 
-		format.html	{redirect_to(:action=>:index)	}
-	
-		format.js	{
-				   @entries = rss.items
-				}
+		format.html	{ redirect_to feeds_url	}
+		format.js	{ @entries = rss.items }		   			
 	end
     else
 	flash[:error]='Creating new feed failed.'
 	respond_to  do |format|
 		format.html	{render @feed	}		
-
 		format.js	
 	end
     end
