@@ -1,10 +1,10 @@
-html{
+html, body{
   font-family: Verdana, Helvetica, Arial;
   font-size: 13px;
   height: 100%;
 }
 
-body {
+html {
 
   	background-image: url(../images/bg-clouds.png);
 	background-repeat: no-repeat;	
@@ -123,6 +123,7 @@ span {
 	border-bottom: 2px solid;
 	font: small-caps 40px/40px "Times New Roman", serif;
 	text-align: left;
+	float: top;
 }
 
 #user_info {
@@ -142,7 +143,8 @@ span {
 
 	#columns #left_column {
 		width: 16em;
-		padding-top: 1ex;
+		padding-top: 2ex;
+		background-color: green;
 	}
 
 		#columns #left_column a {
@@ -151,7 +153,6 @@ span {
 		}
 
 	#columns #main_column {
-		margin-left: 12em;
 		background: white;
 		padding: 2ex 5ex
 	}
