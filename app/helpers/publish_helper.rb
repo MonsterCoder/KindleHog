@@ -3,12 +3,12 @@ require 'rss'
 require 'hpricot'
 
 module PublishHelper
-	def GetEntities(feeds=current_user.feeds)
+	def GetSubscriptions(feeds=current_user.feeds)
 		entities = []
 		
 		feeds.each { |feed|
 	   		rss = parse(feed.link)
-	   		entities = entities + rss.items 
+	   		entities << {:feed => feed, :items => rss.items }
 		}
 
 		return entities

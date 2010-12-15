@@ -1,8 +1,11 @@
+<h2><%=entry[:feed].title%></h2>
 
-	<h3><%= entry.title %> </h3>
-	<b ><%=entry.dc_creator%> <%= entry.pubDate%> </b><br/>
+<%entry[:items].each do |item|%>
+	<h3><%= item.title %> </h3>
+	<b ><%=item.dc_creator%> <%= item.pubDate%> </b><br/>
 
-	<%=sanitize entry.description%>
-	<%= link_to "[more]", entry.link%> <br/><br/>
+	<%=sanitize item.description%>
+	<%= link_to "[more]", item.link%> <br/><br/>
+<%end%>
 
 

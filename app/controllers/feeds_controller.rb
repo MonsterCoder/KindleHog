@@ -9,7 +9,7 @@ class FeedsController < ApplicationController
   respond_to :html, :js
 
   def index
-	@entries = GetEntities(current_user.feeds)
+	@entries = GetSubscriptions(current_user.feeds)
   end
 
   def new
@@ -36,7 +36,7 @@ class FeedsController < ApplicationController
     if @feed.save
 	respond_to do |format| 
 		format.html	{ redirect_to feeds_url	}
-		format.js	{ @entries = rss.items }		   			
+		format.js	{ @entries = [{:feed => @feed, :items => rss.items }]}		   			
 	end
     else
 	flash[:error]='Creating new feed failed.'
