@@ -8,7 +8,7 @@ html {
 
   	background-image: url(../images/bg-clouds.png);
 	background-repeat: no-repeat;	
-	background-position: center -56px;
+	background-position: center -69px;
 
 
 }
@@ -120,7 +120,7 @@ span {
 	padding-left: 5px;
 	padding-top: 20px;
 	padding-bottom: 25px;
-	border-bottom: 2px solid;
+	
 	font: small-caps 40px/40px "Times New Roman", serif;
 	text-align: left;
 	float: top;
@@ -136,25 +136,33 @@ span {
 }
 
 #columns {
-		padding-top: 1ex;
+		padding-top: 4ex;
 		padding-left: 1em;
 		padding-bottom: 1em;
 }
 
 	#columns #left_column {
-		width: 16em;
-		padding-top: 2ex;
-		background-color: green;
+		width: 13em;
+		padding-top: 1ex;
+
+		float: left;
 	}
 
-		#columns #left_column a {
-			color: #bfb;
+		#columns #left_column ul {
 			font-size: small;
+			margin: auto;
+			text-decoration: none
 		}
+		#columns #left_column li {
+			float: left;
+		}
+
+
 
 	#columns #main_column {
 		background: white;
-		padding: 2ex 5ex
+		padding: 1ex 3ex;
+		margin-left: 14em
 	}
 
 

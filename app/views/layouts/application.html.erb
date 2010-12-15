@@ -29,6 +29,11 @@
 			<div id = "left_column">	
 
 				<%=content_for :left_column_top%>
+				<ul>
+					<li><%=link_to 'All entires', new_feed_path, {:method=>:get, :remote=>true} %></li>
+					<li><%=link_to 'Manage Subscriptions', new_feed_path, {:method=>:get, :remote=>true} %></li>
+					<li><%=link_to 'Delivery Settings', new_feed_path, {:method=>:get, :remote=>true} %></li>
+				</ul>
 				
 				<%=content_for :left_column_buttom%>
 		
