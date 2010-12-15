@@ -1,11 +1,19 @@
-<h2><%=entry[:feed].title%></h2>
+<div class="entry_title">	
+	<h2><%=entry[:feed].title%> (<%=entry[:items].count.to_s%>)</h2>
+</div>
 
-<%entry[:items].each do |item|%>
-	<h3><%= item.title %> </h3>
-	<b ><%=item.dc_creator%> <%= item.pubDate%> </b><br/>
+<div class="entry_items">
+	<ul>
+	<%entry[:items].each do |item|%>
+		<li>
+			<h3><%= item.title %> </h3>
+			<b ><%=item.dc_creator%> <%= item.pubDate%> </b><br/>
 
-	<%=sanitize item.description%>
-	<%= link_to "[more]", item.link%> <br/><br/>
-<%end%>
+			<%=sanitize item.description%><br/>
+			<%= link_to "[Read More]", item.link%> 
+		</li>
+	<%end%>
+	</ul>
+</div>
 
 
