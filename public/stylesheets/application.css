@@ -143,29 +143,46 @@ span {
 }
 
 	#columns #left_column {
-		width: 13em;
+		width: 18em;
 		padding-top: 1ex;
 
+
 		float: left;
+		
 	}
+		#columns #left_column a {
+			text-decoration:none;
+			color: black;
+			font-weight: bold;
+		}
+		#columns #left_column a:hover {
+			text-decoration:underline;
+			color: #226;
+			font-size: 120%;
+		}
 
 		#columns #left_column ul {
 			font-size: small;
 			margin: auto;
-			text-decoration: none
+			
+			white-space:nowrap;
+			text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;   
+			    -ms-text-overflow: ellipsis; 
+			overflow: hidden;
 		}
-		#columns #left_column li {
-			float: left;
-		}
-
 
 
 	#columns #main_column {
 		background: white;
 		padding: 1ex 3ex;
-		margin-left: 14em
+		margin-left: 17em
 	}
 
+	#columns #main_column ol {
+		 list-style-position: outside; 
+		
+	}
 
 .description {
 	color:        #244;

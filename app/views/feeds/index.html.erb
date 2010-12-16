@@ -4,12 +4,19 @@
 
 	<%end%>
 
+	<%content_for :left_column_buttom do%>
+		<h3><%=link_to "All Subscriptions", feeds_url%><h3>
+		<ul>
+			<%= render :partial=> "subscription", :collection => current_user.feeds%>
+		</ul>
+	<%end%>
 
 	<div id="top_row_content">
 	</div>
 
+
 	<div id="entriesCount">
-		<h1>You have <%=@entries.count%> items</h1>
+		
 	</div>
 
 	<!--<%=button_to "Send to kindle", {:controller=>'publish', :action=>'create'}%>-->

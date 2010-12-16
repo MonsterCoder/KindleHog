@@ -2,8 +2,7 @@
 	<h2><%=entry[:feed].title%> (<%=entry[:items].count.to_s%>)</h2>
 </div>
 
-<div class="entry_items">
-	<ul>
+<ol>
 	<%entry[:items].each do |item|%>
 		<li>
 			<h3><%= item.title %> </h3>
@@ -13,7 +12,7 @@
 			<%= link_to "[Read More]", item.link%> 
 		</li>
 	<%end%>
-	</ul>
-</div>
+</ol>
+
 
 
