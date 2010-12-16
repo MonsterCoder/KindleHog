@@ -5,10 +5,15 @@
 	<%end%>
 
 	<%content_for :left_column_buttom do%>
-		<h3><%=link_to "All Subscriptions", feeds_url%><h3>
-		<ul>
-			<%= render :partial=> "subscription", :collection => current_user.feeds%>
-		</ul>
+		<div id="left_column_buttom_subscriptions">
+			<h3><%=link_to "All Subscriptions", feeds_url%><h3>
+			<ul>
+				<%= render :partial=> "subscription", :collection => current_user.feeds%>
+			</ul>
+		</div>
+		<div id="left_column_buttom_manage">
+			<%= link_to "Manage your subscriptions >>", "manage/subscription"%>
+		</div>
 	<%end%>
 
 	<div id="top_row_content">
@@ -19,7 +24,6 @@
 		
 	</div>
 
-	<!--<%=button_to "Send to kindle", {:controller=>'publish', :action=>'create'}%>-->
 
 	<div id="feed_entry">
 		<%= render :partial=> "entry", :collection => @entries%>	

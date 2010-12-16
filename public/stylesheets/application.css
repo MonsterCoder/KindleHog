@@ -145,24 +145,29 @@ span {
 	#columns #left_column {
 		width: 18em;
 		padding-top: 1ex;
-
-
+		font-size: medium;
 		float: left;
-		
 	}
-		#columns #left_column a {
+
+		#columns #left_column #left_column_buttom_subscriptions a {
 			text-decoration:none;
 			color: black;
 			font-weight: bold;
 		}
-		#columns #left_column a:hover {
+
+		#columns #left_column #left_column_buttom_subscriptions a:hover {
 			text-decoration:underline;
 			color: #226;
 			font-size: 120%;
 		}
 
+		#columns #left_column #left_column_buttom_manage a {
+			text-decoration:none;
+			color: red;
+		}
+
 		#columns #left_column ul {
-			font-size: small;
+			
 			margin: auto;
 			
 			white-space:nowrap;
