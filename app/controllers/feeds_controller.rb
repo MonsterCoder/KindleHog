@@ -10,6 +10,7 @@ class FeedsController < ApplicationController
 
   def index
 	@entries = GetSubscriptions(current_user.feeds)
+	render  :layout=>"reader"
   end
 
   def new
@@ -48,8 +49,10 @@ class FeedsController < ApplicationController
   end
   
   def show
-    @feed = Feed.find(params[:id])
-    @rss = parse(@feed.link)
+    feed = Feed.find(params[:id])
+    rss = parse(feed.link)
+    @entries = {:feed => feed, :items => rss.items }
+    render :layout=>"reader"
   end
 
   def edit

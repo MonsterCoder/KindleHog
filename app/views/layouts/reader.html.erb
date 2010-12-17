@@ -1,0 +1,24 @@
+	<%content_for :left_column_top do%>
+		
+		<%=button_to 'Add subscription', new_feed_path, {:method=>:get, :remote=>true} %>
+
+	<%end%>
+
+	<%content_for :left_column_buttom do%>
+		<div id="left_column_buttom_subscriptions">
+			<h3><%=link_to "All Subscriptions", feeds_url%><h3>
+			<ul>
+				<%= render :partial=> "subscription", :collection => current_user.feeds%>
+			</ul>
+		</div>
+		<div id="left_column_buttom_manage">
+			<%= link_to "Manage your subscriptions >>", "manage/subscription"%>
+		</div>
+	<%end%>
+
+
+	<%= render :file=> "layouts/application"%>	
+
+
+
+

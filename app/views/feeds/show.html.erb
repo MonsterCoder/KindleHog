@@ -1,15 +1,11 @@
+	<div id="top_row_content">
+	</div>
 
-<p>
-	<%= @rss.channel.title %><br/>
-	<%= @rss.channel.link%> <br>
-	<%="Total entries #{@rss.items.size}"%>
-</p>
 
-<p>
-	<% for item in @rss.items%>
-		<%= link_to item.title, item.link%><br/>
-		<%= item.date %><br/>
-		<%= raw item.description%><br/><br/>
-	<%end%>
-</p>
+	<div id="entriesCount">
+		
+	</div>
+	<div id="feed_entry">
+		<%= render :partial=> "entry", :object => @entries%>	
+	</div>
 
