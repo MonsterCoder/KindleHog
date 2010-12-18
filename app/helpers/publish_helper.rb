@@ -8,7 +8,7 @@ module PublishHelper
 		
 		feeds.each { |feed|
 	   		rss = parse(feed.link)
-	   		entities << {:feed => feed, :items => rss.items }
+	   		entities << {:feed => feed, :items => rss.items.map {|i| Item.new(i)} }
 		}
 
 		return entities

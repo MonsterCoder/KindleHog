@@ -37,7 +37,7 @@ class FeedsController < ApplicationController
     if @feed.save
 	respond_to do |format| 
 		format.html	{ redirect_to feeds_url	}
-		format.js	{ @entries = [{:feed => @feed, :items => rss.items }]}		   			
+		format.js	{ @entries = GetSubscriptions([@feed])}		   			
 	end
     else
 	flash[:error]='Creating new feed failed.'
@@ -51,7 +51,7 @@ class FeedsController < ApplicationController
   def show
     feed = Feed.find(params[:id])
     rss = parse(feed.link)
-    @entries = {:feed => feed, :items => rss.items }
+    @entries =  GetSubscriptions([feed])
     render :layout=>"reader"
   end
 
@@ -63,7 +63,7 @@ class FeedsController < ApplicationController
   def destroy
     @feed = Feed.find(params[:id])
     @feed.destroy
-    redirect_to(:action=>'index')
+    redirect_to :back
   end
 
   def update
@@ -71,6 +71,8 @@ class FeedsController < ApplicationController
     @feed.update_attributes(params[:feed])
     redirect_to(:action=>'show') 
   end
+
+
 
 
 end
