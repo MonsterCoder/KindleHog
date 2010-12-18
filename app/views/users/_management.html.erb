@@ -1,1 +1,9 @@
-<%=link_to management.title, management, :method=>:delete%>
+
+<tr>
+	<td>
+ 		<%= management.title%>
+	</td>
+	<td>
+		<%=button_to "Remove", feed_path(management), {:method=>:delete, :confirm=>"Are you sure to remove this subscription?"}%>
+	</td>
+</tr>

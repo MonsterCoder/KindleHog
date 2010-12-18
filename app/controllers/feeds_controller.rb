@@ -71,8 +71,4 @@ class FeedsController < ApplicationController
     @feed.update_attributes(params[:feed])
     redirect_to(:action=>'show') 
   end
-
-
-
-
 end
