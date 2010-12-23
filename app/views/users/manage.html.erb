@@ -1,4 +1,19 @@
-<h2>Manage your subscritions</h2>
+<%content_for :left_column_top do%>
+	
+	<%=button_to 'Add subscription', new_feed_path, {:method=>:get, :remote=>true} %>
+	<%=link_to '<< Back to home', {:controller=>:feeds, :action=>:index}%>
+<%end%>
+
+<div id="top_row_content">
+	<% if @subcriptions.count == 0%>
+		You currently don't have any subsrciption.
+	<%else%>
+		<h2>Manage your subscritions</h2>
+	<%end%>
+</div>
+
 <table>
-	<%=render :partial=>"management", :collection=>@subcriptions%>
+
+		<%=render :partial=>"management", :collection=>@subcriptions%>
+
 </table>
