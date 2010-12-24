@@ -3,7 +3,6 @@
 
 	<head>
 		  <title>Kindle Hog Reader</title>
-
 		  <%= stylesheet_link_tag :all %>
 			<link rel="stylesheet" href="http://domain.tld/screen.css" type="text/css" media="Screen" />
 			<link rel="stylesheet" href="http://domain.tld/mobile.css" type="text/css" media="handheld" />
@@ -25,7 +24,9 @@
 			    <%= link_to "Sign in", new_user_session_path %>   
 			  <% end %>   
 		</div>
-
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
 		
 		<div id="columns">
 			<div id = "left_column">	
