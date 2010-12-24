@@ -1,0 +1,48 @@
+= ORM Adapter
+
+Provides a single point of entry for popular ruby ORMs.  Its target audience is gem authors who want to support more than one ORM.
+
+
+== Example of use
+
+  require 'orm_adapter'
+
+  User # is it an ActiveRecord, DM Resource, or MongoId Document?
+  
+  User.to_adapter.find_first :name => 'Fred' # we don't care!
+  
+  user_model = User.to_adapter
+  user_model.get!(1)                      # find a record by id
+  user_model.find_first(:name => 'fred')  # find first fred
+  user_model.find_all(:name => 'fred')    # find all freds
+  user_model.create!(:name => 'fred')     # create a fred 
+  
+
+== Supported ORMs
+
+Currently supported ORMs are *ActiveRecord*, *DataMapper* and *MongoId*.
+
+We welcome you to write new adapters as gems. ORM Adapter will stay focused in having these three major ORMs working.
+
+To write an adapter look at <tt>lib/orm_adapter/adapters/active_record.rb</tt> for an example of implementation.  To see how to test it, look at <tt>spec/orm_adapter/example_app_shared.rb</tt>, <tt>spec/orm_adapter/adapters/active_record_spec.rb</tt>.  You'll need to require the target ORM in <tt>spec/spec_helper.rb</tt>
+
+
+== Goals
+
+ORM Adapter goal is to support a minimum API used by most of the plugins that needs agnosticism beyond Active Model.
+
+ORM Adapter will support only basic methods, as +get+, +find_first+, <tt>create!</tt> and so forth. It is not ORM Adapter's goal to support different query constructions, handle table joins, etc.
+
+If you need complex queries, we recommend you to subclass ORM Adapters in your plugin and extend it expressing these query conditions as part of your domain logic.
+
+
+== History
+
+orm_adapter is an extraction from {pickle}[http://github.com/ianwhite/pickle] by {Ian White}[http://github.com/ianwhite].  Pickle's orm adapter included work by {Daniel Neighman}[http://github.com/hassox], {Josh Bassett}[http://github.com/nullobject], {Marc Lee}[http://github.com/maleko], and {Sebastian Zuchmanski}[http://github.com/sebcioz].
+
+{José Valim}[http://github.com/josevalim] suggested the extraction, and worked on the first release with Ian.
+
+
+== Copyright
+
+Copyright (c) 2010 Ian White and José Valim. See LICENSE for details.
