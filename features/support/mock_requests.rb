@@ -2,10 +2,7 @@ Devise::OmniAuth.test_mode!
 
 Devise::OmniAuth.short_circuit_authorizers!
 
-Devise::OmniAuth.stub!(:facebook) do |b|
-    b.post('/oauth/access_token') { [200, {}, ACCESS_TOKEN.to_json] }
-    b.get('/me?access_token=plataformatec') { [200, {}, FACEBOOK_INFO.to_json] }
-end
+
 
 at_exit do
   Devise::OmniAuth.unshort_circuit_authorizers!

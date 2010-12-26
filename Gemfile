@@ -14,16 +14,13 @@ gem 'omniauth'
 gem 'oa-oauth', :require=>"omniauth/oauth"
 
 group :development, :test do
-  gem 'mocha'
-  gem 'builder', '2.1.2'
-  gem 'rspec'
-  gem 'rspec-rails', '>= 2.0.1'
+  gem 'pickle'
   gem 'cucumber'
   gem 'cucumber-rails'
-  gem 'pickle'
   gem 'capybara'
-  gem 'webrat'
-  #gem 'factory_girl_rails'
-  #gem 'autotest'
-  #gem 'autotest-rails'
+  gem 'rspec-rails', '>= 2.0.1'
+  gem 'factory_girl_rails'
+  gem 'autotest'
+  gem 'autotest-rails'
 end
+

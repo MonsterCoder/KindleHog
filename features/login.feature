@@ -25,8 +25,7 @@ Scenario: signin failed with wrong password
     Then I should be on the sign in page
     And I should see "Invalid email or password."
 
-@ignore
-Scenario: signin Successfully through twitter
-    Given I follow "Twitter"
-    Then I should see "testkindlehog@gmail.com"
+#Scenario: signin Successfully through twitter
+#   Given I follow "Twitter"
+#    Then I should see "testkindlehog@gmail.com"
     
