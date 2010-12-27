@@ -10,14 +10,14 @@ Background:
          | 456@gmail.com    | 456789            |
     And I am on the sign in page
 
-Scenario: signin Successfully with email and password
+Scenario: login with email and correct password should success
     Given I fill in the following:
          | user_email       | 123@gmail.com      |
          | user_password    | 123456             |
     When I press "Sign in"
     Then I should be on the feeds page
 
-Scenario: signin failed with wrong password
+Scenario: login with wrong password should fail
     Given I fill in the following:
          | user_email       | 123@gmail.com     |
          | user_password    | 456789            |
