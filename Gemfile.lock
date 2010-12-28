@@ -196,11 +196,13 @@ PLATFORMS
 DEPENDENCIES
   autotest
   autotest-rails
+  builder (= 2.1.2)
   capybara
   cucumber
   cucumber-rails
   devise (= 1.2.rc)
   factory_girl_rails
+  gherkin (= 2.2.9)
   hpricot
   nokogiri
   oa-oauth

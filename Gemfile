@@ -14,6 +14,7 @@ gem 'omniauth'
 gem 'oa-oauth', :require=>"omniauth/oauth"
 
 group :development, :test do
+  gem 'gherkin', '2.2.9'
   gem 'pickle'
   gem 'cucumber'
   gem 'cucumber-rails'
@@ -22,5 +23,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'autotest'
   gem 'autotest-rails'
+  gem 'builder', '2.1.2'
 end
 
