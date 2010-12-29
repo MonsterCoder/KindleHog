@@ -66,6 +66,6 @@ KindleHog::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  match  '/auth/twitter/callback', :to=> 'login#twitter'
+  match  '/auth/twitter/callback', :to=> 'Omniauth#twitter'
   match '/users/:id/manage', :to=>'users#manage'
 end
