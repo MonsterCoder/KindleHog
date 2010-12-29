@@ -12,18 +12,15 @@ class LoginController < ApplicationController
 	    else
 	      user = User.new
 	      user.apply_omniauth(omniauth)
-	      p omniauth
 
 	      if user.save
-			flash[:notice] = "Signed in successfully."
-			sign_in_and_redirect(:user, user)
+			    flash[:notice] = "Signed in successfully."
+			    sign_in_and_redirect(:user, user)
 	      else
-			flash[:notice] =  "Failed creating a new user account from your twitter login, please sign-up and add Twitter as login option in settings."	
-			session[:omniauth] = omniauth.except('extra')
-			redirect_to new_user_registration_url
-	      end
-
-	      
+	        flash[:notice] = "Please input an email address and a password here. You can login by using either Twitter or usename/password next time."
+			    session[:omniauth] = omniauth.except('extra')
+			    redirect_to new_user_registration_url
+	      end     
 	    end
 	end
 end

@@ -7,7 +7,7 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'hpricot'
-gem 'devise', '1.2.rc' 
+gem 'devise', '1.2.rc'
 gem 'nokogiri'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'omniauth'

@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   has_many :feeds, :dependent => :delete_all 
   has_many :authentications, :dependent => :delete_all 
-
+  
   def apply_omniauth(omniauth)
     self.email = omniauth['user_info']['email'] if email.blank?
     authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])

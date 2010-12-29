@@ -1,6 +1,6 @@
 KindleHog::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers=>{:registrations=>'registrations', :passwords=>'passwords'}, :reset_password_keys=>:email
 
   get "send/preview"
 
