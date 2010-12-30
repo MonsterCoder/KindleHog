@@ -55,6 +55,7 @@ KindleHog::Application.routes.draw do
       resources :feeds
       resources :users
       resources :publish
+      resources :omniauth
   #   end
 
   # You can have the root of your site routed with "root"
@@ -66,6 +67,6 @@ KindleHog::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  match  '/auth/twitter/callback', :to=> 'Omniauth#twitter'
+  match  '/auth/twitter/callback', :to=> 'Omniauth#create'
   match '/users/:id/manage', :to=>'users#manage'
 end
