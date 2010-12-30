@@ -10,7 +10,7 @@
 	<%=button_to "Send", {:controller=>'publish', :action=>'index'}, {:method=>:get}%>
 
 	<p>
-		<%=link_to 'Add feeds', :controller=>'feeds', :action => 'new' %>
-		<%=link_to 'Manage my feeds', :controller=>'feeds', :action => 'index' %>
+		<%=link_to 'Add feeds', :controller=>'subscriptions', :action => 'new' %>
+		<%=link_to 'Manage my feeds', :controller=>'subscriptions', :action => 'index' %>
 	</p>
 

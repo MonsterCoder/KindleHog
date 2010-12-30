@@ -1,0 +1,19 @@
+	<div id="top_row_content">
+		<% if @entries.count == 0%>
+			You currently don't have any subsrciption.
+		<%end%>
+	</div>
+
+
+	<div id="entriesCount">
+	
+	</div>	
+	<div id="feed_entry">
+			<%= render :partial=> "entry", :collection => @entries%>		
+	</div>
+
+
+
+
+
+

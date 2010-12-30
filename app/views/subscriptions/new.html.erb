@@ -1,0 +1,6 @@
+<p class = 'error'><%= h flash[:error]%><p/>
+<%=form_for(@feed) do |f|%>
+	<%=f.label :Link %>
+	<%=f.text_field :link%>
+	<%=f.submit %>
+<% end %>

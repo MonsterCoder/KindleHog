@@ -3,7 +3,7 @@ require 'rss'
 require 'hpricot'
 
 module PublishHelper
-	def GetSubscriptions(feeds=current_user.feeds)
+	def GetSubscriptions(feeds=current_user.subscriptions)
 		entities = []
 		
 		feeds.each { |feed|

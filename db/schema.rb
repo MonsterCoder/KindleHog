@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101228010352) do
+ActiveRecord::Schema.define(:version => 20101230072135) do
 
   create_table "authentications", :force => true do |t|
     t.string   "uid"
@@ -26,16 +26,6 @@ ActiveRecord::Schema.define(:version => 20101228010352) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "feeds", :force => true do |t|
-    t.string   "link"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
-    t.string   "description"
-    t.datetime "LastUpdate"
-    t.integer  "user_id"
   end
 
   create_table "omniauthables", :force => true do |t|
@@ -55,6 +45,16 @@ ActiveRecord::Schema.define(:version => 20101228010352) do
 
   add_index "omniauthables", ["email"], :name => "index_omniauthables_on_email", :unique => true
   add_index "omniauthables", ["reset_password_token"], :name => "index_omniauthables_on_reset_password_token", :unique => true
+
+  create_table "subscriptions", :force => true do |t|
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "description"
+    t.datetime "LastUpdate"
+    t.integer  "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

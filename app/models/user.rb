@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :login, :username, :email, :password, :password_confirmation, :remember_me
 
-  has_many :feeds, :dependent => :delete_all 
+  has_many :subscriptions, :dependent => :delete_all 
   has_many :authentications, :dependent => :delete_all 
   
   def apply_omniauth(omniauth)

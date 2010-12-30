@@ -1,0 +1,5 @@
+<%=form_for(@feed, :remote => true) do |f|%>
+	<%=f.label :Link %>
+	<%=f.text_field :link%>
+	<%=f.submit :value=>:add%>
+<% end %>

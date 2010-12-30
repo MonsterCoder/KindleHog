@@ -1,7 +1,7 @@
 <%content_for :left_column_top do%>
 	
-	<%=button_to 'Add subscription', new_feed_path, {:method=>:get, :remote=>true} %>
-	<%=link_to '<< Back to home', {:controller=>:feeds, :action=>:index}%>
+	<%=button_to 'Add subscription', new_subscription_path, {:method=>:get, :remote=>true} %>
+	<%=link_to '<< Back to home', {:controller=>:subscriptions, :action=>:index}%>
 <%end%>
 
 <div id="top_row_content">
