@@ -2,7 +2,7 @@ module FeedHelper
   def parse(link)
     content = ''
     open(link) { |f|
-	content = f.read
+	      content = f.read
     }
 
     RSS::Parser.parse(content, false)

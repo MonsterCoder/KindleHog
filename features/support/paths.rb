@@ -14,14 +14,9 @@ module NavigationHelpers
       '/users/sign_in'
     when /the sign up page/
       '/users/sign_up'
-    when /the subscriptions page/
-      '/subscriptions'
-    # Add more mappings here.
-    # Here is an example that pulls values out of the Regexp:
-    #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
-
+    when /the user "(.+)" subscriptions page/
+      user = User.where(["username = :value OR email = :value", { :value => $1 }]).first
+     "/users/#{user.id}/subscriptions"
     else
       begin
         page_name =~ /the (.*) page/

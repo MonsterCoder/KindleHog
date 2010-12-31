@@ -35,9 +35,9 @@ class SubscriptionsController < ApplicationController
     @feed.LastUpdate= rss.items.last.date.to_s
 
     if @feed.save
-	respond_to do |format| 
-		format.html	{ redirect_to feeds_url	}
-		format.js	{ @entries = GetSubscriptions([@feed])}		   			
+	    respond_to do |format| 
+		  format.html	{ redirect_to feeds_url	}
+		  format.js	{ @entries = GetSubscriptions([@feed])}		   			
 	end
     else
 	flash[:error]='Creating new feed failed.'
