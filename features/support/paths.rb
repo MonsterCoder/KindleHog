@@ -14,7 +14,7 @@ module NavigationHelpers
       '/users/sign_in'
     when /the sign up page/
       '/users/sign_up'
-    when /the user "(.+)" subscriptions page/
+  when /the subscriptions page for the user "(.+)"/
       user = User.where(["username = :value OR email = :value", { :value => $1 }]).first
      "/users/#{user.id}/subscriptions"
     else

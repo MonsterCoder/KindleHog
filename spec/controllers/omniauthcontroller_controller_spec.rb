@@ -4,7 +4,7 @@ describe OmniauthController do
   include Devise::TestHelpers
 
   it "create action should redirect to root after logging in a user when authentication is found" do
-    user = Factory(:user)
+    user = User.make
     user.authentications.create!(:provider => "twitter", :uid => "123")
     request.env["omniauth.auth"] = {"provider" => "twitter", "uid" => "123"}
     sign_in user
@@ -14,7 +14,7 @@ describe OmniauthController do
   end
   
   it "create action should add authentication when logged in to a registered user" do
-    user = Factory(:user)
+    user = User.make
     @controller.stub!(:current_user).and_return(user)
     request.env["omniauth.auth"] = {"provider" => "twitter", "uid" => "456"}
     post :create
