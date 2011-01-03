@@ -4,7 +4,7 @@ module FeedHelper
     open(link) { |f|
 	      content = f.read
     }
-    p content
+
     RSS::Parser.parse(content, false)
  
   end
@@ -14,9 +14,9 @@ module FeedHelper
     link = "http://" + link unless link.match(/^http:\/\//)
         
     open(link) { |f|
-	content = f.read
+	    content = f.read
     }
-
+    
     doc = Hpricot(content)
 
     rsslink = (doc/"head/link").detect {|l| l.attributes['rel']=="alternate"}

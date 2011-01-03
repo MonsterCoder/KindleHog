@@ -6,9 +6,10 @@ end
 
 Given /^I have (\d+) subscriptions$/ do |num|
   Given %{a user exists with password: "123456"}
+  responds =  File.read(Rails.root.join("features/step_definitions/reponse.xml"))
   num.to_i.times do |i|
     subscription = Subscription.make(:user=> model(:user))
-    FakeWeb.register_uri(:get, "#{subscription.link}", :body => "Nothing to be found 'round here")                                                 
+    FakeWeb.register_uri(:get, "#{subscription.link}", :body => responds)                                                 
   end
 end
 
@@ -23,6 +24,6 @@ end
 Then /^I should see all my subscriptions$/ do
   user = model(:user)
   user.subscriptions.each do |subscription|
-    Then %{I should see "#{subscription.link}"}
+    Then %{I should see "#{subscription.title}"}
   end
 end

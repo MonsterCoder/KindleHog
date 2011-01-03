@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+
+<channel>
+	<title>Wow! eBook - Great ebook, great site!</title>
+	
+	<link>http://www.wowebook.com</link>
+	<description>Visit to Wow! eBook to download ebook, premium wordpress themes, seo tips, make money tutorials and much more...</description>
+	<lastBuildDate>Wed, 29 Dec 2010 18:55:01 +0000</lastBuildDate>
+	<language>en</language>
+
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.0.3</generator>
+		<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/wowebook" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="wowebook" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><feedburner:emailServiceId xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">wowebook</feedburner:emailServiceId><feedburner:feedburnerHostname xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">http://feedburner.google.com</feedburner:feedburnerHostname><item>
+		<title>Drupal 7 Module Development</title>
+		<link>http://www.wowebook.com/open-source/drupal-7-module-development.html</link>
+
+		<comments>http://www.wowebook.com/open-source/drupal-7-module-development.html#comments</comments>
+		<pubDate>Wed, 29 Dec 2010 18:19:50 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Web Dev.]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[CMS]]></category>
+
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Drupal]]></category>
+		<category><![CDATA[Module]]></category>
+		<category><![CDATA[PHP]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7878</guid>
+		<description><![CDATA[Book Description Drupal is an award-winning open-source Content Management System. It&#8217;s a modular system, with an elegant hook-based architecture, and great code. Modules are plugins for Drupal that extend, build or enhance Drupal core functionality. In Drupal 7 Module development book, six professional Drupal developers use a practical, example-based approach to introduce PHP developers to [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/open-source/drupal-7-module-development.html/feed</wfw:commentRss>
+
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Software Testing using Visual Studio 2010</title>
+		<link>http://www.wowebook.com/software-development/software-testing-using-visual-studio-2010.html</link>
+		<comments>http://www.wowebook.com/software-development/software-testing-using-visual-studio-2010.html#comments</comments>
+		<pubDate>Wed, 29 Dec 2010 18:14:27 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Software Dev.]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[Step by Step]]></category>
+		<category><![CDATA[Testing]]></category>
+		<category><![CDATA[Visual Studio]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7876</guid>
+
+		<description><![CDATA[Book Description When testing your applications on the Microsoft platform, Visual Studio 2010 offers you a range of powerful tools for different types of testing. This Microsoft product makes the testing process easier and faster. A concise guide that will lead you through the amazing range of features offered by Visual Studio 2010 to test [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/software-development/software-testing-using-visual-studio-2010.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>wxPython 2.8 Application Development Cookbook</title>
+		<link>http://www.wowebook.com/software-development/wxpython-2-8-application-development-cookbook.html</link>
+
+		<comments>http://www.wowebook.com/software-development/wxpython-2-8-application-development-cookbook.html#comments</comments>
+		<pubDate>Wed, 29 Dec 2010 18:12:24 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Ruby / Python]]></category>
+		<category><![CDATA[Software Dev.]]></category>
+		<category><![CDATA[Apps]]></category>
+		<category><![CDATA[Cookbook]]></category>
+
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[wxPython]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7874</guid>
+		<description><![CDATA[Book Description In today&#8217;s world of desktop applications there is a great amount of incentive to be able to develop applications that can run in more than one environment. Currently there are a handful of options available for cross platform frameworks to develop desktop applications in Python. wxPython is one such cross- platform GUI toolkit [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/software-development/wxpython-2-8-application-development-cookbook.html/feed</wfw:commentRss>
+
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Learn Office 2011 for Mac OS X</title>
+		<link>http://www.wowebook.com/business/learn-office-2011-for-mac-os-x.html</link>
+		<comments>http://www.wowebook.com/business/learn-office-2011-for-mac-os-x.html#comments</comments>
+		<pubDate>Tue, 28 Dec 2010 16:13:12 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Business]]></category>
+		<category><![CDATA[Mac OS]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[Office]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7869</guid>
+		<description><![CDATA[Book Description Office for Mac remains the leading productivity suite for Mac, with Apple’s iWork and the free OpenOffice.org trailing far behind.  And now it&#8217;s being updated with a cleaner interface and more compatibility with Exchange and SharePoint. Learn Office 2011 for Mac OS X offers a practical, hands-on approach to using Office 2011 applications [...]]]></description>
+
+		<wfw:commentRss>http://www.wowebook.com/business/learn-office-2011-for-mac-os-x.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Pro Android Media: Developing Graphics, Music, Video, and Rich Media Apps for Smartphones and Tablets</title>
+		<link>http://www.wowebook.com/mobile-development/pro-android-media.html</link>
+		<comments>http://www.wowebook.com/mobile-development/pro-android-media.html#comments</comments>
+
+		<pubDate>Tue, 28 Dec 2010 16:09:41 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Mobile Dev.]]></category>
+		<category><![CDATA[Android]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[Media]]></category>
+		<category><![CDATA[Open Source]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7867</guid>
+		<description><![CDATA[Book Description Mobile devices have evolved to focus on rich media production and consumption. Developers of mobile applications are able to create applications that allow people to play, capture, and share media in a variety of new ways on mobile devices. The popularity of Android has soared in part because the platform offers developers a [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/mobile-development/pro-android-media.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Pro SharePoint 2010 Business Intelligence Solutions</title>
+
+		<link>http://www.wowebook.com/sharepoint/pro-sharepoint-2010-business-intelligence-solutions.html</link>
+		<comments>http://www.wowebook.com/sharepoint/pro-sharepoint-2010-business-intelligence-solutions.html#comments</comments>
+		<pubDate>Tue, 28 Dec 2010 16:07:44 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[SharePoint]]></category>
+		<category><![CDATA[Business]]></category>
+		<category><![CDATA[SharePoint 2010]]></category>
+
+		<category><![CDATA[SQL Server]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7865</guid>
+		<description><![CDATA[Book Description Business Intelligence (BI) software is everywhere. It is the code and tools that allow you to view different components of a business using a single visual platform, making comprehending mountains of data easier. With SharePoint 2010, Microsoft has married one of the most-used team collaboration tools with its business intelligence products, including PerformancePoint [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/sharepoint/pro-sharepoint-2010-business-intelligence-solutions.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+
+		<title>iOS Forensic Analysis: for iPhone, iPad and iPod Touch</title>
+		<link>http://www.wowebook.com/others/ios-forensic-analysis.html</link>
+		<comments>http://www.wowebook.com/others/ios-forensic-analysis.html#comments</comments>
+		<pubDate>Mon, 27 Dec 2010 13:57:54 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Others]]></category>
+
+		<category><![CDATA[Analysis]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[iPad]]></category>
+		<category><![CDATA[iPhone]]></category>
+		<category><![CDATA[iPod Touch]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7858</guid>
+		<description><![CDATA[Book Description iOS Forensic Analysis provides an in-depth look at investigative processes for the iPhone, iPod Touch, and iPad devices. The methods and procedures outlined in the book can be taken into any courtroom. With iOS information never published before and data sets that are new and evolving, this book gives the examiner and investigator [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/others/ios-forensic-analysis.html/feed</wfw:commentRss>
+
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Oracle PL/SQL Recipes: A Problem-Solution Approach</title>
+		<link>http://www.wowebook.com/database/oracle-plsql-recipes.html</link>
+		<comments>http://www.wowebook.com/database/oracle-plsql-recipes.html#comments</comments>
+		<pubDate>Mon, 27 Dec 2010 13:52:56 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Database]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Oracle]]></category>
+		<category><![CDATA[PL/SQL]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7856</guid>
+
+		<description><![CDATA[Book Description Oracle PL/SQL Recipes is your go to book for PL/SQL programming solutions. It takes a task-oriented approach to PL/SQL programming that lets you quickly look up a specific task and see the pattern for a solution. Then it’s as simple as modifying the pattern for your specific application and implementing it. And you’re [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/database/oracle-plsql-recipes.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Pro JavaScript with MooTools</title>
+		<link>http://www.wowebook.com/javascript/pro-javascript-with-mootools.html</link>
+
+		<comments>http://www.wowebook.com/javascript/pro-javascript-with-mootools.html#comments</comments>
+		<pubDate>Mon, 27 Dec 2010 13:49:27 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[MooTools]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7854</guid>
+
+		<description><![CDATA[Book Description Pro JavaScript with MooTools is unlike any other JavaScript book on the market today. While similar books focus on either JavaScript as a language of the browser or how to use JavaScript Frameworks, Pro JavaScript with MooTools fills the gap between these topics and moves beyond—exploring the advanced features of JavaScript and how [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/javascript/pro-javascript-with-mootools.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Pro WPF and Silverlight MVVM: Effective Application Development with Model-View-ViewModel</title>
+		<link>http://www.wowebook.com/dot-net/pro-wpf-and-silverlight-mvvm.html</link>
+
+		<comments>http://www.wowebook.com/dot-net/pro-wpf-and-silverlight-mvvm.html#comments</comments>
+		<pubDate>Mon, 27 Dec 2010 13:46:48 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[.NET]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Microsoft]]></category>
+		<category><![CDATA[MVVM]]></category>
+
+		<category><![CDATA[Silverlight]]></category>
+		<category><![CDATA[WPF]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7852</guid>
+		<description><![CDATA[Book Description WPF and Silverlight are unlike any other user interface (UI) technologies. They have been built to a new paradigm that—if harnessed correctly—can yield unprecedented power and performance. This book shows you how to control that power to produce clean, testable, maintainable code. It is now recognized that any non-trivial WPF or Silverlight application [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/dot-net/pro-wpf-and-silverlight-mvvm.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+
+		<item>
+		<title>HTML &amp; CSS: The Complete Reference, 5th Edition</title>
+		<link>http://www.wowebook.com/web-development/html-css-the-complete-reference-5th-edition.html</link>
+		<comments>http://www.wowebook.com/web-development/html-css-the-complete-reference-5th-edition.html#comments</comments>
+		<pubDate>Sat, 25 Dec 2010 17:20:16 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+
+				<category><![CDATA[Web Dev.]]></category>
+		<category><![CDATA[CSS]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML5]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7846</guid>
+		<description><![CDATA[Book Description The Definitive Guide to HTML &#38; CSS&#8211;Fully Updated Written by a Web development expert, the fifth edition of this trusted resource has been thoroughly revised and reorganized to address HTML5, the revolutionary new Web standard. The book covers all the elements supported in today&#8217;s Web browsers&#8211;from the standard (X)HTML tags to the archaic [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/web-development/html-css-the-complete-reference-5th-edition.html/feed</wfw:commentRss>
+
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>HTML5: Designing Rich Internet Applications</title>
+		<link>http://www.wowebook.com/web-development/html5-designing-rich-internet-applications.html</link>
+		<comments>http://www.wowebook.com/web-development/html5-designing-rich-internet-applications.html#comments</comments>
+		<pubDate>Sat, 25 Dec 2010 17:17:37 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Web Dev.]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Web]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7844</guid>
+		<description><![CDATA[Book Description Implement the powerful new multimedia and interactive capabilities offered by HTML5, including style control tools, illustration tools, video, audio, and rich media solutions. Understand how HTML5 is changing the Web development game with this full-color, project-based treatment that shows you-not just tells you-what HTML5 can do for your Web sites. Reinforce your practical [...]]]></description>
+
+		<wfw:commentRss>http://www.wowebook.com/web-development/html5-designing-rich-internet-applications.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Up and Running with AutoCAD 2011: 2D Drawing and Modeling</title>
+		<link>http://www.wowebook.com/designing-photography/up-and-running-with-autocad-2011.html</link>
+		<comments>http://www.wowebook.com/designing-photography/up-and-running-with-autocad-2011.html#comments</comments>
+
+		<pubDate>Sat, 25 Dec 2010 17:14:41 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Designing / Photography]]></category>
+		<category><![CDATA[AutoCAD]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7842</guid>
+		<description><![CDATA[Book Description Get &#8220;Up and Running&#8221; with AutoCAD using Gindis&#8217; combination of step-by-step instruction, examples, and insightful explanations. The emphasis from the beginning is on core concepts and practical application of AutoCAD in Architecture, Engineering and Design. Equally useful in instructor-led classroom training or self-study, the book is written with the student in mind by [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/designing-photography/up-and-running-with-autocad-2011.html/feed</wfw:commentRss>
+
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>DOM Scripting: Web Design with JavaScript and the Document Object Model, 2nd Edition</title>
+		<link>http://www.wowebook.com/javascript/dom-scripting-2nd-edition.html</link>
+		<comments>http://www.wowebook.com/javascript/dom-scripting-2nd-edition.html#comments</comments>
+		<pubDate>Fri, 24 Dec 2010 18:08:32 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Ajax]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[DOM]]></category>
+		<category><![CDATA[Web]]></category>
+		<category><![CDATA[XHTML]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7838</guid>
+
+		<description><![CDATA[<p><br mce_bogus="1"></p>
+]]></description>
+		<wfw:commentRss>http://www.wowebook.com/javascript/dom-scripting-2nd-edition.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Foundations of Python 3 Network Programming, 2nd Edition</title>
+		<link>http://www.wowebook.com/networking/foundations-of-python-3-network-programming-2nd-edition.html</link>
+
+		<comments>http://www.wowebook.com/networking/foundations-of-python-3-network-programming-2nd-edition.html#comments</comments>
+		<pubDate>Fri, 24 Dec 2010 18:02:55 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Networking]]></category>
+		<category><![CDATA[Ruby / Python]]></category>
+		<category><![CDATA[FastCGI]]></category>
+		<category><![CDATA[IMAP]]></category>
+
+		<category><![CDATA[POP]]></category>
+		<category><![CDATA[Programming]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[SMTP]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7836</guid>
+		<description><![CDATA[Book Description This book gives you everything you need to know about network programming using Python 3, the latest version of the Python language. It will benefit both scripters and serious application developers who want a feature-rich, yet simple language. Fully updated, this second edition includes all the new developments in network programming such as [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/networking/foundations-of-python-3-network-programming-2nd-edition.html/feed</wfw:commentRss>
+
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>php|architect’s Guide to Web Scraping</title>
+		<link>http://www.wowebook.com/php/php-architects-guide-to-web-scraping.html</link>
+		<comments>http://www.wowebook.com/php/php-architects-guide-to-web-scraping.html#comments</comments>
+		<pubDate>Fri, 24 Dec 2010 15:14:04 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Web]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7831</guid>
+		<description><![CDATA[Book Description Despite all the advancements in web APIs and interoperability, it’s inevitable that, at some point in your career, you will have to “scrape” content from a website that was not built with web services in mind. And, despite its sometimes less-than-stellar reputation, web scraping is usually an entire legitimate activity—for example, to capture [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/php/php-architects-guide-to-web-scraping.html/feed</wfw:commentRss>
+
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>php|architect’s Guide to Date and Time Programming</title>
+		<link>http://www.wowebook.com/php/php-architects-guide-to-date-and-time-programming.html</link>
+		<comments>http://www.wowebook.com/php/php-architects-guide-to-date-and-time-programming.html#comments</comments>
+		<pubDate>Fri, 24 Dec 2010 15:10:37 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Development]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7828</guid>
+		<description><![CDATA[Book Description If your development involves working with dates and times, then this book is a must-have. In this book, Derick Rethans (contributor to PHP’s core date extension and well-known PHP expert) explores in great detail the subtle nuances of working with dates and times. Frequently PHP developers encounter unexpected results that adversely affect their [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/php/php-architects-guide-to-date-and-time-programming.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+
+		</item>
+		<item>
+		<title>Hardboiled Web Design</title>
+		<link>http://www.wowebook.com/web-development/hardboiled-web-design.html</link>
+		<comments>http://www.wowebook.com/web-development/hardboiled-web-design.html#comments</comments>
+		<pubDate>Thu, 23 Dec 2010 18:07:23 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+
+				<category><![CDATA[Web Dev.]]></category>
+		<category><![CDATA[CSS3]]></category>
+		<category><![CDATA[Designing]]></category>
+		<category><![CDATA[HTML5]]></category>
+		<category><![CDATA[Web]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7820</guid>
+		<description><![CDATA[Book Description If you’ve been working on the web for a while, your bookshelves may already be buckling under the weight of books about HTML and CSS. Do you really need another one? Hardboiled Web Design is different. It’s for people who want to understand why, when and how to use the latest HTML5 and [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/web-development/hardboiled-web-design.html/feed</wfw:commentRss>
+
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>A Practical Guide to Information Architecture</title>
+		<link>http://www.wowebook.com/others/a-practical-guide-to-information-architecture.html</link>
+		<comments>http://www.wowebook.com/others/a-practical-guide-to-information-architecture.html#comments</comments>
+		<pubDate>Thu, 23 Dec 2010 18:04:43 +0000</pubDate>
+
+		<dc:creator>Wow!</dc:creator>
+				<category><![CDATA[Others]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7818</guid>
+		<description><![CDATA[Book Description If you&#8217;re a website designer, intranet manager or someone without much Information Architecture experience, this book answers all those questions you were afraid to ask. Drawing on her many years experience of practising and teaching Information Architecture, Donna Spencer guides you through some simple steps to better IA and leaves you feeling empowered [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/others/a-practical-guide-to-information-architecture.html/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+
+		</item>
+		<item>
+		<title>A Practical Guide to Designing with Data</title>
+		<link>http://www.wowebook.com/others/a-practical-guide-to-designing-with-data.html</link>
+		<comments>http://www.wowebook.com/others/a-practical-guide-to-designing-with-data.html#comments</comments>
+		<pubDate>Thu, 23 Dec 2010 18:01:57 +0000</pubDate>
+		<dc:creator>Wow!</dc:creator>
+
+				<category><![CDATA[Others]]></category>
+
+		<guid isPermaLink="false">http://www.wowebook.com/?p=7816</guid>
+		<description><![CDATA[Book Description In recent years, the terms Visualization, Infographic and others have been bantered around with almost no regard to their use or meaning. There is a new vernacular emerging in the realms of data representations, but that doesn’t mean we can ignore the much simpler origins and best practices of charts and graphs. Brian [...]]]></description>
+		<wfw:commentRss>http://www.wowebook.com/others/a-practical-guide-to-designing-with-data.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+
+</rss>
+
