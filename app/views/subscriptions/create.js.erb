@@ -1,4 +1,4 @@
 
 $("top_row_content").update("");  
-$("entriesCount").update("<h1><%=escape_javascript(@entries.count.to_s)%> new items was added.</h1>");  
+$("entriesCount").update("<h1><%=escape_javascript(@feed.link)%> was successfully subscripted.</h1>");  
 $("feed_entry").update("<%= escape_javascript(render :partial=> "entry", :collection => @entries)%>");  

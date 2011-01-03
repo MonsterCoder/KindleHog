@@ -36,7 +36,7 @@ class SubscriptionsController < ApplicationController
 
     if @feed.save
 	    respond_to do |format| 
-		    format.html	{ redirect_to user_subscriptions_url, :notice=>"Successfully added a new subscription."	}
+		    format.html	{ redirect_to user_subscriptions_url, :notice=>"#{@feed.link} was successfully subscripted."	}
 		    format.js	{   @entries = GetSubscriptions([@feed])}		   			
 	    end
     else

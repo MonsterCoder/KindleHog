@@ -44,4 +44,9 @@ When /^I add a new subscription "([^"]*)"$/ do |link|
   And %{I press "subscription_submit"}
 end
 
+Then /^I should see title for subscription "([^"]*)" within "([^"]*)"$/ do |link, scope|
+   subscription = Subscription.find_by_link(link)
+   Then %{I should see "#{subscription.title}" within "#{scope}"}
+end
+
   
