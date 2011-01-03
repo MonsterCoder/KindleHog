@@ -24,6 +24,15 @@ end
 Then /^I should see all my subscriptions$/ do
   user = model(:user)
   user.subscriptions.each do |subscription|
-    Then %{I should see "#{subscription.title}"}
+    Then %{I should see "#{subscription.title}" within "#left_column"}
   end
 end
+
+Then /^I should see all news items$/ do
+  user = model(:user)
+  user.subscriptions.each do |subscription|
+    rss = RSS::Parser.parse(File.read(Rails.root.join("features/step_definitions/reponse.xml")), false)
+    rss.items.each {|item| Then %{I should see "#{item.title}"}}
+  end
+end
+  

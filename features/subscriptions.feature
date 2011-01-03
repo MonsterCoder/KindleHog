@@ -5,10 +5,11 @@ I want to see a list of my subscritions
 
 Scenario: no subscription
 Given I have no subscription
-When I have signed in
-And I should see "You currently don't have any subsrciption."
+When  I have signed in
+And   I should see "You currently don't have any subsrciption."
 
 Scenario: user with subscriptions
 Given I have 10 subscriptions
-When I have signed in
-And I should see all my subscriptions
+When  I have signed in
+Then  I should see all my subscriptions
+And   I should see all news items
