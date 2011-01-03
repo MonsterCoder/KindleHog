@@ -22,11 +22,11 @@ class SubscriptionsController < ApplicationController
     @feed = current_user.subscriptions.build(params[:subscription])
 
     begin
-	link = processRssLink(@feed[:link])
-	rss = parse(link)
+	    link = processRssLink(@feed[:link])
+	    rss = parse(link)
     rescue
-	redirect_to(@feed, :notice=>"Not a valid feed link'")
-	return
+	    redirect_to(@feed, :error=>"Not a valid feed link")
+	    return
     end
 
     @feed.link= link
@@ -36,15 +36,14 @@ class SubscriptionsController < ApplicationController
 
     if @feed.save
 	    respond_to do |format| 
-		  format.html	{ redirect_to user_subscriptions_url	}
-		  format.js	{   @entries = GetSubscriptions([@feed])}		   			
-	end
+		    format.html	{ redirect_to user_subscriptions_url, :notice=>"Successfully added a new subscription."	}
+		    format.js	{   @entries = GetSubscriptions([@feed])}		   			
+	    end
     else
-	flash[:error]='Creating new feed failed.'
-	respond_to  do |format|
-		format.html	{render @feed	}		
-		format.js	
-	end
+	      respond_to  do |format|
+		      format.html	{render @feed, :error=>"Adding new subscription failed."	}		
+		      format.js	
+	      end
     end
   end
   
