@@ -8,7 +8,7 @@ class SubscriptionsController < ApplicationController
 
   respond_to :html, :js
 
-  def index
+  def index 
 	  @entries = GetSubscriptions(current_user.subscriptions)
 	  render  :layout=>"reader"
   end
@@ -36,8 +36,8 @@ class SubscriptionsController < ApplicationController
 
     if @feed.save
 	    respond_to do |format| 
-		  format.html	{ redirect_to feeds_url	}
-		  format.js	{ @entries = GetSubscriptions([@feed])}		   			
+		  format.html	{ redirect_to user_subscriptions_url	}
+		  format.js	{   @entries = GetSubscriptions([@feed])}		   			
 	end
     else
 	flash[:error]='Creating new feed failed.'
@@ -61,8 +61,8 @@ class SubscriptionsController < ApplicationController
   end
 
   def destroy
-    @feed = Subscription.find(params[:id])
-    @feed.destroy
+    feed = Subscription.find(params[:id])
+    current_user.subscriptions.delete(feed)
     redirect_to :back
   end
 

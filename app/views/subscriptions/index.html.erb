@@ -9,7 +9,9 @@
 	
 	</div>	
 	<div id="feed_entry">
+	  <% if @entries.count > 0%>
 			<%= render :partial=> "entry", :collection => @entries%>		
+		<% end %>
 	</div>
 
 

@@ -26,5 +26,6 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'builder', '2.1.2'
   gem 'launchy'
+  gem 'fakeweb'
 end
 

@@ -4,7 +4,7 @@ module FeedHelper
     open(link) { |f|
 	      content = f.read
     }
-
+    p content
     RSS::Parser.parse(content, false)
  
   end

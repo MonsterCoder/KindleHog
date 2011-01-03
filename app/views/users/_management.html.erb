@@ -3,6 +3,6 @@
  		<%= management.title%>
 	</td>
 	<td>
-		<%=button_to "Remove", subscription_path(management), {:method=>:delete, :confirm=>"Are you sure to remove this subscription?"}%>
+		<%=button_to "Remove", user_subscription_path(current_user, management), {:method=>:delete, :confirm=>"Are you sure to remove this subscription?"}%>
 	</td>
 </tr>

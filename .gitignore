@@ -1,5 +1,6 @@
 $ cat .gitignore
 
 test/ruby/*
+tmp/*
 *.log
 *.pid

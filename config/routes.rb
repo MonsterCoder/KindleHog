@@ -54,6 +54,7 @@ KindleHog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
       resources :users do
           resources :subscriptions
+          get 'manage', :on=>:member
       end
       resources :publish
       resources :omniauth
