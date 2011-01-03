@@ -35,4 +35,13 @@ Then /^I should see all news items$/ do
     rss.items.each {|item| Then %{I should see "#{item.title}"}}
   end
 end
+
+When /^I add a new subscription "([^"]*)"$/ do |link|
+  responds =  File.read(Rails.root.join("features/step_definitions/reponse.xml"))
+  FakeWeb.register_uri(:get, "#{link}", :body => responds)   
+  Given %{I press "Add subscription"}
+  And %{I fill in "subscription_link" with "#{link}"}
+  And %{I press "subscription_submit"}
+end
+
   
