@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110104060414) do
+ActiveRecord::Schema.define(:version => 20101230072135) do
 
   create_table "authentications", :force => true do |t|
     t.string   "uid"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20110104060414) do
     t.string   "title"
     t.string   "description"
     t.datetime "LastUpdate"
-    t.integer  "user_id",     :limit => 255
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
@@ -67,9 +67,9 @@ ActiveRecord::Schema.define(:version => 20110104060414) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "username"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
