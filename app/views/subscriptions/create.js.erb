@@ -2,3 +2,4 @@
 $("top_row_content").update("");  
 $("entriesCount").update("<h1><%=escape_javascript(@feed.link)%> was successfully subscripted.</h1>");  
 $("feed_entry").update("<%= escape_javascript(render :partial=> "entry", :collection => @entries)%>");  
+$("subscriptions_list").update("<%= escape_javascript(render :partial=> "subscription", :collection => current_user.subscriptions)%>"); 

@@ -27,5 +27,6 @@ group :development, :test do
   gem 'builder', '2.1.2'
   gem 'launchy'
   gem 'fakeweb'
+  gem 'database_cleaner'
 end
 

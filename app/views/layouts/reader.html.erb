@@ -7,7 +7,7 @@
 	<%content_for :left_column_buttom do%>
 		<div id="left_column_buttom_subscriptions">
 			<h3><%=link_to "All Subscriptions", user_subscriptions_path%><h3>
-			<ul>
+			<ul id = "subscriptions_list"">
 				<%= render :partial=> "subscription", :collection => current_user.subscriptions%>
 			</ul>
 		</div>
