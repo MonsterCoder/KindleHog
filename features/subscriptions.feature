@@ -20,9 +20,8 @@ And   I have signed in
 When  I add a new subscription "www.rss.com"
 Then  I should see "http://www.rss.com was successfully subscripted."
 And   a subscription should exist with link: "http://www.rss.com"
-And   I should see title for subscription "http://www.rss.com" within "#left_colum"
+And   I should see title for subscription "http://www.rss.com" within "#left_column"
 
-@wip
 @javascript
 Scenario: user add a subscription with js enabled
 Given I have no subscription
@@ -31,4 +30,11 @@ When  I add a new subscription "www.rss.com"
 Then  I should see "http://www.rss.com was successfully subscripted."
 And   a subscription should exist with link: "http://www.rss.com"
 And   I should see title for subscription "http://www.rss.com" within "#left_column"
+
+@wip
+Scenario: remove a subscription
+Given I have 3 subscriptions
+When  I have signed in
+And   I follow "Manage your subscriptions >>"
+Then  I should be on the manage page
 

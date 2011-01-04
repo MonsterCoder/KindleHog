@@ -14,9 +14,12 @@ module NavigationHelpers
       '/users/sign_in'
     when /the sign up page/
       '/users/sign_up'
-  when /the subscriptions page for the user "(.+)"/
-      user = User.where(["username = :value OR email = :value", { :value => $1 }]).first
-     "/users/#{user.id}/subscriptions"
+    when /the subscriptions page for the user "(.+)"/
+        user = User.where(["username = :value OR email = :value", { :value => $1 }]).first
+       "/users/#{user.id}/subscriptions"
+    when /the manage page/
+      user = model(:user)
+      "/users/#{user.id}/manage"
     else
       begin
         page_name =~ /the (.*) page/
