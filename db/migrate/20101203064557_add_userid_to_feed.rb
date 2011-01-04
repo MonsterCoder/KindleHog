@@ -1,6 +1,6 @@
 class AddUseridToFeed < ActiveRecord::Migration
   def self.up
-	add_column :feeds, :user_id, :string
+	add_column :feeds, :user_id, :integer
   end
 
   def self.down

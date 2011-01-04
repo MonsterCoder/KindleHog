@@ -79,6 +79,10 @@ GEM
       rake (>= 0.8.7)
     gherkin (2.3.3)
       json (~> 1.4.6)
+    heroku (1.15.1)
+      json_pure (>= 1.2.0, < 1.5.0)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
     hpricot (0.8.3)
     i18n (0.4.2)
     json (1.4.6)
@@ -212,6 +216,7 @@ DEPENDENCIES
   faker
   fakeweb
   gherkin
+  heroku
   hpricot
   launchy
   machinist
