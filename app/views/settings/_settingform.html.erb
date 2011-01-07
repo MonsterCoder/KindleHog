@@ -1,0 +1,9 @@
+<%= form_for([current_user, @setting]) do |f|%>
+  <%= f.label :email%>
+  <%= f.text_field :email%>
+  <%= f.label :schedualed_send%>
+  <%= f.text_field :schedualed_send%>
+  <%= f.label :items_after%>
+  <%= f.text_field :items_after%>
+  <%= f.submit %>
+<%end%>
