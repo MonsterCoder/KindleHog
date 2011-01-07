@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110107201910) do
+ActiveRecord::Schema.define(:version => 20110107211416) do
 
   create_table "authentications", :force => true do |t|
     t.string   "uid"
@@ -47,12 +47,10 @@ ActiveRecord::Schema.define(:version => 20110107201910) do
   add_index "omniauthables", ["reset_password_token"], :name => "index_omniauthables_on_reset_password_token", :unique => true
 
   create_table "settings", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.string   "email"
-    t.datetime "schedualed_send"
+    t.string   "send_to"
+    t.integer  "schedualed_send"
     t.datetime "items_after"
+    t.integer  "user_id"
   end
 
   create_table "subscriptions", :force => true do |t|
