@@ -17,7 +17,8 @@
 		  	
 		<div id="user_info">
 			  <% if user_signed_in? %>   
-			    <%= current_user.email %>. Not you?   
+			    <%= current_user.email %>
+			    <%= link_to "My settings" %>
 			    <%= link_to "Sign out", destroy_user_session_path %>   
 			  <% else %>   
 			    <%= link_to "Sign up", new_user_registration_path %> or  

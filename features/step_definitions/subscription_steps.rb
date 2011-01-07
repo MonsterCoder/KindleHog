@@ -14,11 +14,13 @@ Given /^I have (\d+) subscriptions$/ do |num|
 end
 
 When /^I have signed in$/ do
-  user = model(:user)
+  Given %{a user exists with password: "123456"} unless model(:user)
+  user = model(:user)  
+   
   Given %{I go to the sign in page}
-  And %{I fill in "user_login" with "#{user.email}"}  
-  And %{I fill in "user_password" with "123456"}
-  And %{I press "Sign in"}
+    And %{I fill in "user_login" with "#{user.email}"}  
+    And %{I fill in "user_password" with "123456"}
+    And %{I press "Sign in"}
 end
 
 Then /^I should see all my subscriptions$/ do
@@ -40,8 +42,8 @@ When /^I add a new subscription "([^"]*)"$/ do |link|
   responds =  File.read(Rails.root.join("features/step_definitions/reponse.xml"))
   FakeWeb.register_uri(:get, "#{link}", :body => responds)   
   Given %{I press "Add subscription"}
-  And %{I fill in "subscription_link" with "#{link}"}
-  And %{I press "subscription_submit"}
+    And %{I fill in "subscription_link" with "#{link}"}
+    And %{I press "subscription_submit"}
 end
 
 Then /^I should see title for subscription "([^"]*)" within "([^"]*)"$/ do |link, scope|

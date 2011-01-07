@@ -17,9 +17,9 @@ module NavigationHelpers
     when /the subscriptions page for the user "(.+)"/
         user = User.where(["username = :value OR email = :value", { :value => $1 }]).first
        "/users/#{user.id}/subscriptions"
-    when /the manage page/
+    when /the (\w+) page/
       user = model(:user)
-      "/users/#{user.id}/manage"
+      "/users/#{user.id}/#{$1}"
     else
       begin
         page_name =~ /the (.*) page/
