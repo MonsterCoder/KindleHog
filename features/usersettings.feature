@@ -3,12 +3,11 @@ As a user
 I want to use a settings page to change my information and settings
 
 Scenario: settings link
-When  I have signed in
+Given  I have signed in
 Then  I should see "My settings"
 
-@wip
-Scenario: go to settings page
-When  I have signed in
-And  I follow "My settings"
-Then I should be on the settings page
+Scenario: go to settings page without a settings exists
+Given  I have signed in
+When  I follow "My settings"
+Then I should be on the new settings page
 

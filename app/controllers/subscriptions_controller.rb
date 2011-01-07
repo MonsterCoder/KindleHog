@@ -14,8 +14,8 @@ class SubscriptionsController < ApplicationController
   end
 
   def new
-	@feed= current_user.subscriptions.build()
-	respond_with(@feed)
+	  @feed= current_user.subscriptions.build()
+	  respond_with(@feed)
   end
   	
   def create

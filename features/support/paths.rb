@@ -20,6 +20,9 @@ module NavigationHelpers
     when /the (\w+) page/
       user = model(:user)
       "/users/#{user.id}/#{$1}"
+    when /the (\w+) (\w+) page/
+      user = model(:user)
+      "/users/#{user.id}/#{$2}/#{$1}"
     else
       begin
         page_name =~ /the (.*) page/
