@@ -1,8 +1,8 @@
 KindleHog::Application.routes.draw do
 
-  devise_for :users, :controllers=>{:registrations=>'registrations'}, :reset_password_keys=>:email
+  resources :settings
 
-  get "send/preview"
+  devise_for :users, :controllers=>{:registrations=>'registrations'}, :reset_password_keys=>:email
 
   get "feed/index"
 
@@ -54,6 +54,7 @@ KindleHog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
       resources :users do
           resources :subscriptions
+          resources :settings
           get 'manage', :on=>:member
       end
       resources :publish
@@ -70,5 +71,4 @@ KindleHog::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
   match  '/auth/twitter/callback', :to=> 'Omniauth#create'
-  match '/users/:id/manage', :to=>'users#manage'
 end
