@@ -1,6 +1,6 @@
 <%content_for :left_column_top do%>
 	
-	<%=button_to 'Add subscription', new_user_subscription_path(current_user,current_user.subscriptions), {:method=>:get, :remote=>true} %>
+	<!--<%=button_to 'Add subscription', new_user_subscription_path(current_user,current_user.subscriptions), {:method=>:get, :remote=>true} %>-->
 	<%=link_to '<< Back to home', user_subscriptions_path(current_user,current_user.subscriptions)%>
 <%end%>
 

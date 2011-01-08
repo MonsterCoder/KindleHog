@@ -4,7 +4,7 @@ Given /^I have (\d+) settings$/ do |num|
 
 end
 
-Then /^I should all my settings$/ do
+Then /^I should see all my settings$/ do
   user = model(:user)
   user.settings.each do |setting|
   Then %[I should see "#{setting.send_to}"]
@@ -12,3 +12,6 @@ Then /^I should all my settings$/ do
   end
 end
 
+When /^I press the (\d+)th "delete" button$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end

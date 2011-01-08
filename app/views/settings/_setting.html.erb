@@ -1,14 +1,20 @@
-<tb>
-  <tr>
-      <td>Send_to:</td>
-      <td><%= setting.send_to %></td>
-  </tr>
-  <tr>
-      <td>next_send:</td>
-      <td><%= setting.schedualed_send%></td>
-  </tr>
-  <tr>
-      <td>News after:</td>
-      <td><%= setting.items_after%></td>
-  </tr>
-<tb>
+<li>
+  <table>
+    <tr>
+        <td>Send_to:</td>
+        <td><%= setting.send_to %></td>
+    </tr>
+    <tr>
+        <td>next_send:</td>
+        <td><%= setting.schedualed_send%></td>
+    </tr>
+    <tr>
+        <td>News after:</td>
+        <td><%= setting.items_after%></td>
+    </tr>
+    <tr>
+        <td><%=button_to "remove", user_setting_path(current_user, setting), {:method => :delete,  :confirm=>"Are you sure to remove this setting?"}%></td>
+        <td><%=button_to "edit", edit_user_setting_path(current_user, setting), {:method => :get}%></td>
+    </tr>
+  <table>
+</li>

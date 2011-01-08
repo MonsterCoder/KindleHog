@@ -1,17 +1,23 @@
-<h>Settings</h>
+<h>You can set when and where to send your subscriptions here.</h>
 <div id="top_row_content">
 		<% if @settings.count == 0%>
 			You currently don't have any settings.
 		<%end%>
 	</div>
+<%content_for :left_column_top do%>
 
+	<%=link_to '<< Back to home', user_subscriptions_path(current_user,current_user.subscriptions)%>
+<%end%>
 
 	<div id="settingsCount">
 	
 	</div>	
 	<div id="settings_list">
 	  <% if @settings.count > 0%>
+	    <ul>
 			<%= render :partial=> "setting", :collection => @settings%>		
+			<ul>
 		<% end %>
+		<%= render :partial=>"settingform"%>
 	</div>
 

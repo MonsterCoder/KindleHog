@@ -23,4 +23,22 @@ class SettingsController < ApplicationController
     end
   end
   
+  def destroy 
+    setting = current_user.settings.find_by_id(params[:id])
+    current_user.settings.delete(setting)
+    redirect_to :action =>:index
+  end
+  
+  def edit
+    @setting = current_user.settings.find_by_id(params[:id])
+    render :partial => "settingform"
+  end
+  
+  def update
+    setting = current_user.settings.find_by_id(params[:id])
+    setting.update_attributes(params[:setting])
+    redirect_to :action => :index
+  end
+  
+  
 end

@@ -1,9 +1,9 @@
-<%= form_for([current_user, @setting]) do |f|%>
+<%= form_for([current_user, @setting||current_user.settings.build]) do |f|%>
   <%= f.label :send_to%>
-  <%= f.text_field :send_to%>
+  <%= f.text_field :send_to%><br/>
   <%= f.label :schedualed_send%>
-  <%= f.text_field :schedualed_send%>
+  <%= f.text_field :schedualed_send%><br/>
   <%= f.label :items_after%>
-  <%= f.text_field :items_after%>
+  <%= f.text_field :items_after%><br/>
   <%= f.submit %>
 <%end%>
