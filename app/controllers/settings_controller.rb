@@ -9,4 +9,18 @@ class SettingsController < ApplicationController
     render :partial => "settingform"
   end
   
+  def create
+    @setting = current_user.settings.build(params[:setting])
+
+    if @setting.save
+      respond_to do |format|
+        format.html { redirect_to(user_settings_path, :notice => 'Setting was successfully created.') }
+      end
+    else
+      respond_to do |format|
+        format.html { render @setting, :error => "Creating setting failed." }  
+      end    
+    end
+  end
+  
 end
