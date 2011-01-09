@@ -7,11 +7,12 @@ module PublishHelper
     GetSubscriptions(subscriptions, DateTime.now - 3)
 	end
 	
-		def GetSubscriptions(subscriptions=current_user.subscriptions, after = DateTime.beginning_of_day(DateTime.now))
+  def GetSubscriptions(subscriptions=current_user.subscriptions, after = (DateTime.now -3))
 		entities = []
 		subscriptions.each { |subscription|
+		     
 	     		rss = parse(subscription.link)
-	     		entities << {:feed => feed, :items => rss.items.map {|i| Item.new(i)} }
+	     		entities << {:feed => subscription, :items => rss.items.map {|i| Item.new(i)} }
 		}
 
 		return entities

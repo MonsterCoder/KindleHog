@@ -33,14 +33,17 @@ class PublishController < ApplicationController
   
   end
   
-  def self.process
+  def process
+     p "1 +++++++++ process start +++++++++++++++++++="
     users = User.find(:all)
     users.each do |user|
       user.settings.each do |setting|
-        if setting.items_after.future?(DateTime.now)  do
-          if (DateTime.beginning_of_day(DateTime.now) + setting.schedualed_send /24).future?(DateTime.now) do
+         p "2 +++++++++++++ setting.items_after.future?(DateTime.now): #{setting.items_after > DateTime.now} +++++++++++++=="
+        if setting.items_after < DateTime.now 
+          p "3 +++++++++++++ (DateTime.beginning_of_day(DateTime.now) + (setting.schedualed_send.to_i / 24)) < (DateTime.now) :  +++++++++++++=="
+          if (DateTime.now.beginning_of_day + (setting.schedualed_send.to_i / 24)) < (DateTime.now) 
             setting.items_after = DateTime.now + 1
-                send(user, setting.send_to)
+                go(user, setting.send_to)
             setting.save
           end
         end
@@ -48,27 +51,32 @@ class PublishController < ApplicationController
     end
   end
 
-  private 
-  
-  def send(user, email) do
-         entities = GetSubscriptions(user)
+
+  def go(user, email)
+         entities = GetSubscriptions(user.subscriptions)
          response = ""
          body =''
          ref =''
 
          entities.each_with_index { |entity, i|
-           begin
-               	doc = Hpricot(open(entity.link).read)
-                ref =ref +"<a href=\"#c#{i}\"> #{entity.title} </a> <br/>"
-                html =(doc/"body").inner_html
-	              body = "#{body}  <a name=\"c#{i}\"> <p> #{html} </p></a><br/>"
-           rescue
-                ref =ref + "#Failed in getting - {entity.link} - <br/>"
-           end
+              entity[:items].each { |item|
+                       begin
+                            
+                           	doc = Hpricot(open(item.link).read)
+                            ref =ref +"<a href=\"#c#{i}\"> #{item.title} </a> <br/>"
+                            html =(doc/"body").inner_html
+	                          body = "#{body}  <a name=\"c#{i}\"> <p> #{html} </p></a><br/>"
+                       rescue
+                            ref =ref + "#Failed in getting - #{item.link} - <br/>"
+                       end
+                         
+               }
          }
 
          response = "<html><body> #{ref} #{ body} </body></html>"
  
-         	FeedMailer.email(email,response).deliver 
+        FeedMailer.email(email,response).deliver 
+        
+        p "send to address #{email}"
   end
 end
