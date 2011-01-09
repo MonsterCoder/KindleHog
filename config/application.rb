@@ -44,8 +44,8 @@ module KindleHog
 	:address	=> "smtp.gmail.com",
 	:port		=> 587,
 	:domain		=>"kindlehog.com",
-	:user_name	=>"MonsterCoder",
-	:password	=>"new123456",
+	:user_name	=>"kindlehog",
+	:password	=>"kindlehog2011",
 	:authentication	=>"plain",
 	:enable_starttls_auto	=> true
    }
