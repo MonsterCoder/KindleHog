@@ -184,6 +184,8 @@ GEM
       ruby-openid (>= 2.1.7)
     rubyntlm (0.1.1)
     rubyzip (0.9.4)
+    rufus-scheduler (2.0.8)
+      tzinfo (>= 0.3.23)
     selenium-webdriver (0.1.2)
       childprocess (~> 0.1.5)
       ffi (~> 0.6.3)
@@ -226,4 +228,5 @@ DEPENDENCIES
   pickle
   rails (= 3.0.0)
   rspec-rails (>= 2.0.1)
+  rufus-scheduler
   sqlite3-ruby

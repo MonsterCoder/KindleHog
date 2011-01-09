@@ -13,6 +13,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'omniauth'
 gem 'oa-oauth', :require=>"omniauth/oauth"
 gem 'heroku'
+gem 'rufus-scheduler'
 
 group :development, :test do
   gem 'gherkin'
