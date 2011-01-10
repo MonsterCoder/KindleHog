@@ -58,8 +58,8 @@ class PublishController < ApplicationController
          body =''
          ref =''
 
-         entities.each_with_index { |entity, i|
-              entity[:items].each { |item|
+         entities.each { |entity|
+              entity[:items].each_with_index { |item, i|
                        begin
                             
                            	doc = Hpricot(open(item.link).read)
