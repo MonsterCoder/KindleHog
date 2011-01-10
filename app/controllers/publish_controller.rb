@@ -34,13 +34,13 @@ class PublishController < ApplicationController
   end
   
   def process
-     p "1 +++++++++ process start +++++++++++++++++++="
+    
     users = User.find(:all)
     users.each do |user|
       user.settings.each do |setting|
-         p "2 +++++++++++++ setting.items_after.future?(DateTime.now): #{setting.items_after > DateTime.now} +++++++++++++=="
+         
         if setting.items_after < DateTime.now 
-          p "3 +++++++++++++ (DateTime.beginning_of_day(DateTime.now) + (setting.schedualed_send.to_i / 24)) < (DateTime.now) :  +++++++++++++=="
+         
           if (DateTime.now.beginning_of_day + (setting.schedualed_send.to_i / 24)) < (DateTime.now) 
             setting.items_after = DateTime.now + 1
                 go(user, setting.send_to)
