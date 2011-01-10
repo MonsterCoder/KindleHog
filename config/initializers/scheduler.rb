@@ -2,8 +2,7 @@ require 'rufus/scheduler'
 
 scheduler = Rufus::Scheduler.start_new
 
-  scheduler.in  '1m' do
-      RAILS_DEFAULT_LOGGER.info("++++++++++++++scheduler starts++++++++++++++++++++")
+  scheduler.every  '60m' do
       PublishController.new.process
   end
 
