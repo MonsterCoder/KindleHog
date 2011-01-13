@@ -43,7 +43,7 @@ class PublishController < ApplicationController
          
           if (DateTime.now.beginning_of_day + (setting.schedualed_send.to_i / 24)) < (DateTime.now) 
             setting.items_after = DateTime.now + 1
-                go(user, setting.send_to)
+                go(setting)
             setting.save
           end
         end
@@ -52,8 +52,8 @@ class PublishController < ApplicationController
   end
 
 
-  def go(user, email)
-         entities = GetSubscriptions(user.subscriptions)
+  def go(setting)
+         entities = GetSubscriptions(setting.user.subscriptions)
          response = ""
          body =''
          ref =''
@@ -75,8 +75,8 @@ class PublishController < ApplicationController
 
          response = "<html><body> #{ref} #{ body} </body></html>"
  
-        FeedMailer.email(email,response).deliver 
+        FeedMailer.email(setting.send_to,response).deliver 
         
-        p "send to address #{email}"
+        p "send to address #{setting.send_to}"
   end
 end

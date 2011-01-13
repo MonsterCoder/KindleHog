@@ -32,4 +32,17 @@ KindleHog::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+   config.action_mailer.raise_delivery_errors = true
+  
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+	:address	=> "smtp.gmail.com",
+	:port		=> 587,
+	:domain		=>"kindlehog.com",
+	:user_name	=>"MonsterCoder",
+	:password	=>"new123456",
+	:authentication	=>"plain",
+	:enable_starttls_auto	=> true
+   }
 end

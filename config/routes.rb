@@ -54,7 +54,10 @@ KindleHog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
       resources :users do
           resources :subscriptions
-          resources :settings
+          resources :settings do
+            get 'publish', :on=>:member
+          end
+          
           get 'manage', :on=>:member
       end
       resources :publish
