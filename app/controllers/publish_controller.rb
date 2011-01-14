@@ -5,43 +5,14 @@ class PublishController < ApplicationController
   include FeedHelper
   include PublishHelper
 
-  
-  def create 
-     @entities = GetSubscriptions()
-     @response = ""
-     body =''
-     ref =''
-
-     @entities.each_with_index { |entity, i|
-       begin
-       	doc = Hpricot(open(entity.link).read)
-        ref =ref +"<a href=\"#c#{i}\"> #{entity.title} </a> <br/>"
-        html =(doc/"body").inner_html
-	body = "#{body}  <a name=\"c#{i}\"> <p> #{html} </p></a><br/>"
-       rescue
-        ref =ref + "#Failed in getting - {entity.link} - <br/>"
-       end
-     }
-
-     @response = "<html><body> #{ref} #{ body} </body></html>"
-
-     if (current_user.targetEmail)
-     	  FeedMailer.email(current_user.targetEmail, @response).deliver 
-     else
-	      FeedMailer.email(current_user.email, @response).deliver 
-     end
-  
-  end
-  
-  def process
-    
+  def process  
     users = User.find(:all)
     users.each do |user|
       user.settings.each do |setting|
          
         if setting.items_after < DateTime.now 
          
-          if (DateTime.now.beginning_of_day + (setting.schedualed_send.to_i / 24)) < (DateTime.now) 
+          if (DateTime.now.beginning_of_day + (setting.schedualed_send.to_i / 24.0)) < (DateTime.now) 
             setting.items_after = DateTime.now + 1
                 go(setting)
             setting.save
@@ -53,30 +24,34 @@ class PublishController < ApplicationController
 
 
   def go(setting)
-         entities = GetSubscriptions(setting.user.subscriptions)
+
+
          response = ""
          body =''
          ref =''
+         
+        setting.user.subscriptions.each_with_index do |subscription, j|
+          items = GetSubscription(subscription)
+          items.each_with_index { |item, i|
+              begin
+                    if (DateTime.parse(item.pubDate.to_s) >  subscription.LastUpdate) 
+                     	doc = Hpricot(open(item.link).read)
+                      ref =ref +"<a href=\"#c#{j}#{i}\"> #{item.title} </a> <br/>"
+                      html =(doc/"body").inner_html
+                      body = "#{body}  <a name=\"c#{j}#{i}\"> <p> #{html} </p></a><br/>"
+                    end
+              rescue
+                    ref =ref + "#Failed in getting - #{item.link} - <br/>"
+              end
+          }
+          
+          last = items.max {|a,b| a.pubDate <=> b.pubDate } 
+          subscription.LastUpdate = DateTime.parse(last.pubDate.to_s)
+          subscription.save
+        end    
 
-         entities.each { |entity|
-              entity[:items].each_with_index { |item, i|
-                       begin
-                            
-                           	doc = Hpricot(open(item.link).read)
-                            ref =ref +"<a href=\"#c#{i}\"> #{item.title} </a> <br/>"
-                            html =(doc/"body").inner_html
-	                          body = "#{body}  <a name=\"c#{i}\"> <p> #{html} </p></a><br/>"
-                       rescue
-                            ref =ref + "#Failed in getting - #{item.link} - <br/>"
-                       end
-                         
-               }
-         }
-
-         response = "<html><body> #{ref} #{ body} </body></html>"
+        response = "<html><body> #{ref} #{ body} </body></html>"
  
         FeedMailer.email(setting.send_to,response).deliver 
-        
-        p "send to address #{setting.send_to}"
   end
 end

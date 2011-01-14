@@ -1,7 +1,9 @@
-<h>You can set when and where to send your subscriptions here.</h>
+
 <div id="top_row_content">
 		<% if @settings.count == 0%>
-			You currently don't have any settings.
+		<P>
+			<h2>You currently don't have any setting</h2>
+			</P>
 		<%end%>
 	</div>
 <%content_for :left_column_top do%>
@@ -18,6 +20,8 @@
 			<%= render :partial=> "setting", :collection => @settings%>		
 			<ul>
 		<% end %>
-		<%= render :partial=>"settingform"%>
+		<%if @settings.count == 0%>
+		  <%= render :partial=>"settingform"%>
+		<% end %>
 	</div>
 

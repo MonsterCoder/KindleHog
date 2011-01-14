@@ -17,6 +17,13 @@ module PublishHelper
 
 		return entities
 	end
+	
+  def GetSubscription(subscription)
+	    rss = parse(subscription.link)
+	    rss.items.map {|i| Item.new(i)} 
+	end
+	
+	
 end
 
 
