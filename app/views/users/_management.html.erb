@@ -1,8 +1,25 @@
-<tr>
-	<td>
- 		<%= management.title%>
-	</td>
-	<td>
-		<%=button_to "Remove", user_subscription_path(current_user, management), {:method=>:delete, :confirm=>"Are you sure to remove this subscription?"}%>
-	</td>
-</tr>
+<table>
+    <tr>
+	    <td>
+     		<h3><%= management.title%></h3>
+	    </td>
+    </tr>
+    <tr>
+	    <td>
+     		Link: <%= management.link%>
+	    </td>
+    </tr>
+    <tr>
+	    <td>
+     		Last deliver at: <%= management.LastUpdate%>
+	    </td>
+    </tr>
+    <tr>
+	    <td>
+	      <%=button_to "Edit", edit_user_subscription_path(current_user, management), {:method=>:get}%>
+	    </td>
+	    <td>
+	      		<%=button_to "Remove", user_subscription_path(current_user, management), {:method=>:delete, :confirm=>"Are you sure to  remove this subscription?"}%>
+	    </td>
+    </tr>
+</table>

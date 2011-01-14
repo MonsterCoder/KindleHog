@@ -56,7 +56,7 @@ class SubscriptionsController < ApplicationController
 
   def edit
     @feed = Subscription.find(params[:id])
-    render @feed
+    respond_with(@feed)
   end
 
   def destroy
@@ -67,7 +67,8 @@ class SubscriptionsController < ApplicationController
 
   def update
     @feed = Subscription.find(params[:id])
-    @feed.update_attributes(params[:feed])
-    redirect_to(:action=>'show') 
+    @feed.update_attributes(params[:subscription])
+    
+    redirect_to manage_user_path(current_user)
   end
 end
