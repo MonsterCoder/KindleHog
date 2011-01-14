@@ -15,14 +15,14 @@ Scenario: login with email and correct password should success
          | user_login       | 456@gmail.com      |
          | user_password    | 456789             |
     When I press "Sign in"
-    Then I should be on the feeds page
-    
+    Then I should be on the subscriptions page
+ 
 Scenario: login with usernmae and correct password should success
     Given I fill in the following:
-         | user_login       |abc|
-         | user_password    | 123456             |
+         | user_login       |456                |
+         | user_password    | 456789             |
     When I press "Sign in"
-    Then I should be on the feeds page
+    Then I should be on the subscriptions page
 
 Scenario: login with email and wrong password should fail
     Given I fill in the following:
