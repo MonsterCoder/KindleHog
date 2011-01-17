@@ -1,6 +1,20 @@
-<h1>Edit</h1>
+<h2>Edit subscription</h2>
 <%=form_for([current_user, @feed]) do |f|%>
-	<%=f.label :Link %>
-	<%=f.text_field :link%>
+  <table>
+      <tr>
+      	<td><%=f.label :title %></td>
+	      <td><%=f.text_field :title%></td>
+      </tr>
+
+      <tr>
+         	<td><%=f.label :link %></td>
+	        <td><%=f.text_field :link%></td>
+      </tr>
+      
+      <tr>
+       	<td><%=f.label :last_update %></td>
+	      <td><%=f.text_field :LastUpdate%></td>
+      </tr>
+	</table>
 	<%=f.submit %>
 <% end %>

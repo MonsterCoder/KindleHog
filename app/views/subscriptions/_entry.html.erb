@@ -8,7 +8,9 @@
 			<h3><%= item.title %> </h3>
 			<b ><%=item.dc_creator%> <%= item.pubDate%> </b><br/>
 
-			<%=sanitize item.description%><br/>
+			<div class='news_content'>
+			  <%=sanitize item.description%>
+			</div>
 			<%= link_to "[Read More]", item.link%> 
 		</li>
 	<%end%>
