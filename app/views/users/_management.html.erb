@@ -19,7 +19,7 @@
 	      <%=button_to "Edit", edit_user_subscription_path(current_user, management), {:method=>:get}%>
 	    </td>
 	    <td>
-	      		<%=button_to "Remove", user_subscription_path(current_user, management), {:method=>:delete, :confirm=>"Are you sure to  remove this subscription?"}%>
+	      <%=button_to "Remove", user_subscription_path(current_user, management), {:method=>:delete, :confirm=>"Are you sure to  remove this subscription?"}%>
 	    </td>
     </tr>
 </table>

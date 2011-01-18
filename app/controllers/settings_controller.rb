@@ -40,6 +40,12 @@ class SettingsController < ApplicationController
     redirect_to :action => :index
   end
   
+  def preview
+    setting = current_user.settings.find_by_id(params[:id])
+    publisher = PublishController.new
+    @preview = publisher.generateContent(setting, false)
+  end
+  
   def publish
     setting = current_user.settings.find_by_id(params[:id])
     publisher = PublishController.new

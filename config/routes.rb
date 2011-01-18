@@ -56,11 +56,15 @@ KindleHog::Application.routes.draw do
           resources :subscriptions
           resources :settings do
             get 'publish', :on=>:member
+            get 'send', :on=>:member
+            get 'preview', :on=>:member
           end
           
           get 'manage', :on=>:member
+
       end
-      resources :publish
+      
+      resources :publish  
       resources :omniauth
   #   end
 

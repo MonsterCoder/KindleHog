@@ -4,7 +4,7 @@ require 'hpricot'
 class PublishController < ApplicationController
   include FeedHelper
   include PublishHelper
-
+  
   def process  
     users = User.find(:all)
     users.each do |user|
@@ -24,9 +24,12 @@ class PublishController < ApplicationController
 
 
   def go(setting)
-
-
-         response = ""
+        content = generateContent(setting)
+        FeedMailer.email(setting.send_to,content).deliver 
+  end
+  
+  def generateContent(setting,lastupdate=true)
+        response = ""
          body =''
          ref =''
          
@@ -45,13 +48,13 @@ class PublishController < ApplicationController
               end
           }
           
-          last = items.max {|a,b| a.pubDate <=> b.pubDate } 
-          subscription.LastUpdate = DateTime.parse(last.pubDate.to_s)
-          subscription.save
+          if lastupdate
+            last = items.max {|a,b| a.pubDate <=> b.pubDate } 
+            subscription.LastUpdate = DateTime.parse(last.pubDate.to_s)
+            subscription.save
+          end
         end    
 
         response = "<html><body> #{ref} #{ body} </body></html>"
- 
-        FeedMailer.email(setting.send_to,response).deliver 
   end
 end

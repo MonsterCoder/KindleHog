@@ -15,6 +15,7 @@
     <tr>
         <td><%=button_to "remove", user_setting_path(current_user, setting), {:method => :delete,  :confirm=>"Are you sure to remove this setting?"}%></td>
         <td><%=button_to "edit", edit_user_setting_path(current_user, setting), {:method => :get}%></td>
+        <td><%=button_to "preview ", preview_user_setting_path(current_user, setting), {:method => :get}%></td>
         <td><%=button_to "send ", publish_user_setting_path(current_user, setting), {:method => :get}%></td>
     </tr>
   <table>
